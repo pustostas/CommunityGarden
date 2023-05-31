@@ -1,0 +1,49 @@
+﻿@model CommunityGarden.Models.Message
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Message</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MessageId" />
+            <div class="form-group">
+                <label asp-for="ChatId" class="control-label"></label>
+                <input asp-for="ChatId" class="form-control" />
+                <span asp-validation-for="ChatId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SentTime" class="control-label"></label>
+                <input asp-for="SentTime" class="form-control" />
+                <span asp-validation-for="SentTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Text" class="control-label"></label>
+                <input asp-for="Text" class="form-control" />
+                <span asp-validation-for="Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenderId" class="control-label"></label>
+                <input asp-for="SenderId" class="form-control" />
+                <span asp-validation-for="SenderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
