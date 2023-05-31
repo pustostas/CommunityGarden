@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CommunityGarden.Models.Plant>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlotId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HerbId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlantDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastWatered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastFertilized)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlotId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HerbId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlantDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastWatered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastFertilized)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PlantId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PlantId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PlantId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

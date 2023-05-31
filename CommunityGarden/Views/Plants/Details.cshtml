@@ -1,0 +1,48 @@
+﻿@model CommunityGarden.Models.Plant
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Plant</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PlotId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlotId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HerbId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HerbId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PlantDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PlantDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastWatered)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastWatered)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastFertilized)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastFertilized)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PlantId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
