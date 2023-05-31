@@ -11,7 +11,7 @@ import SwiftUI
 struct CommunityGardenApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

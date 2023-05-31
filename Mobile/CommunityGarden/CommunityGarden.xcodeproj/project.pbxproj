@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58415F6E2A2626FF00537131 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F6D2A2626FF00537131 /* LoginView.swift */; };
+		58415F702A262A6300537131 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F6F2A262A6300537131 /* ForgotPasswordView.swift */; };
+		58415F722A263B0B00537131 /* GardensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F712A263B0B00537131 /* GardensView.swift */; };
+		58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F732A263B4600537131 /* GoogleAuthView.swift */; };
+		58415F762A263BF800537131 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F752A263BF800537131 /* SignUpView.swift */; };
 		587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */; };
 		587138E72A261DC7004D1EC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587138E62A261DC7004D1EC4 /* ContentView.swift */; };
 		587138E92A261DC8004D1EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138E82A261DC8004D1EC4 /* Assets.xcassets */; };
 		587138EC2A261DC8004D1EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */; };
+		58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58415F6D2A2626FF00537131 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		58415F6F2A262A6300537131 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		58415F712A263B0B00537131 /* GardensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardensView.swift; sourceTree = "<group>"; };
+		58415F732A263B4600537131 /* GoogleAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthView.swift; sourceTree = "<group>"; };
+		58415F752A263BF800537131 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		587138E12A261DC7004D1EC4 /* CommunityGarden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunityGarden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityGardenApp.swift; sourceTree = "<group>"; };
 		587138E62A261DC7004D1EC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		587138E82A261DC8004D1EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBoxStyleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +64,15 @@
 			isa = PBXGroup;
 			children = (
 				587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */,
+				58415F6D2A2626FF00537131 /* LoginView.swift */,
 				587138E62A261DC7004D1EC4 /* ContentView.swift */,
 				587138E82A261DC8004D1EC4 /* Assets.xcassets */,
 				587138EA2A261DC8004D1EC4 /* Preview Content */,
+				58415F6F2A262A6300537131 /* ForgotPasswordView.swift */,
+				58415F712A263B0B00537131 /* GardensView.swift */,
+				58415F732A263B4600537131 /* GoogleAuthView.swift */,
+				58415F752A263BF800537131 /* SignUpView.swift */,
+				58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */,
 			);
 			path = CommunityGarden;
 			sourceTree = "<group>";
@@ -137,7 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58415F6E2A2626FF00537131 /* LoginView.swift in Sources */,
+				58415F722A263B0B00537131 /* GardensView.swift in Sources */,
 				587138E72A261DC7004D1EC4 /* ContentView.swift in Sources */,
+				58415F762A263BF800537131 /* SignUpView.swift in Sources */,
+				58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */,
+				58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */,
+				58415F702A262A6300537131 /* ForgotPasswordView.swift in Sources */,
 				587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
