@@ -1,15 +1,21 @@
-//
-//  GardensView.swift
-//  CommunityGarden
-//
-//  Created by Станислав Голя on 30.05.2023.
-//
-
 import SwiftUI
 
 struct GardensView: View {
+    @State private var isSidebarOpen = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            
+        }.toolbar {
+            Button("sidebar"){
+                isSidebarOpen.toggle()
+            }
+        }
+        .popover(isPresented: $isSidebarOpen,attachmentAnchor: .rect(.bounds),
+                 arrowEdge: .top){
+            GardenSelectSideBar()
+        }
+        
     }
 }
 
