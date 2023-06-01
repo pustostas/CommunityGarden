@@ -34,6 +34,9 @@
                 @Html.DisplayNameFor(model => model.ExperdID)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.PasswordHash)
             </th>
             <th></th>
@@ -63,6 +66,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ExperdID)
             </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PasswordHash)
             </td>

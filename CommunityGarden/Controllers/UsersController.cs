@@ -88,7 +88,7 @@ namespace CommunityGarden.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,Username,FirstName,SecondName,BirthDate,Email,Bio,ExperdID,PasswordHash")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("UserId,Username,FirstName,SecondName,BirthDate,Email,Bio,ExperdID,Role,PasswordHash")] User user)
         {
             if (id != user.UserId)
             {
