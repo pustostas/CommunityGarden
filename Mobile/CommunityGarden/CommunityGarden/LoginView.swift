@@ -16,26 +16,31 @@ struct LoginView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Text("Welcome back. Enter your credentials to access your account")
-                    .foregroundColor(.gray)
-                    .font(.caption)
+                HStack{
+                    Text("Welcome back. Enter your credentials to access your account")
+                        .foregroundColor(.gray)
+                        .font(.callout)
+                    Spacer()
+                }
                 Group{
+                    Spacer()
                     Spacer()
                 }
                 Group{
                     TextField("Email Adress", text: $email)
-                    
+                        .font(.title2)
                     SecureField("Password", text: $password)
+                        .font(.title2)
                     HStack{
                         NavigationLink("Forgot password?", destination: ForgotPasswordView())
-                            .font(.caption.bold())
+                            .font(.callout.bold())
                             .padding(.horizontal,5)
                         Spacer()
                     }
                     HStack{
                         Toggle( isOn: $isKeepsSigned, label: {
                             Text("Keep me signed in")
-                                .font(.footnote)
+                                .font(.callout)
                                 .foregroundColor(.black)
                         })
                             .padding(5)
@@ -51,6 +56,7 @@ struct LoginView: View {
                 } label: {
                     Text("Continue")
                         .frame(maxWidth: .infinity)
+                        .font(.title2)
                 }
                 .buttonStyle(.borderedProminent)
                 
@@ -58,7 +64,7 @@ struct LoginView: View {
                     
                     Text("or sign up with")
                         .foregroundColor(.gray)
-                        .font(.footnote)
+                        .font(.callout)
                         .padding(.bottom,5)
                     
                     
@@ -68,10 +74,11 @@ struct LoginView: View {
                     }label: {
                         Label{
                             Text("Google")
+                                .font(.title2)
                         } icon:{
                             Image("googleLogo")
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: 30, height: 30)
                                 .environment(\.colorScheme, .dark)
                             
                         }
@@ -81,10 +88,10 @@ struct LoginView: View {
                     Spacer()
                     HStack{
                         Text("Don’t have an Account?")
-                            .font(.callout.bold())
-                        NavigationLink(destination: GoogleAuthView()){
+                            .font(.body.bold())
+                        NavigationLink(destination: RegistrationView()){
                             Text("Sign up here")
-                                .font(.callout.bold())
+                                .font(.body.bold())
                         }
                     }
                 }
