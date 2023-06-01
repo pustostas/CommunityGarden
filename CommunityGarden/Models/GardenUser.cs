@@ -8,6 +8,6 @@
 
         public int GardenId { get; set; }
 
-        public int Role { get; set; }
+        public int Role { get; set; } // 0 - user, 1 - owner. 
     }
 }

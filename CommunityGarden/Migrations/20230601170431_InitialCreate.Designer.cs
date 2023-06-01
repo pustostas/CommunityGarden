@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CommunityGarden.Migrations
 {
     [DbContext(typeof(CommunityGardenContext))]
-    [Migration("20230531115613_InitialCreate")]
+    [Migration("20230601170431_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -356,6 +356,9 @@ namespace CommunityGarden.Migrations
                     b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.Property<string>("SecondName")
                         .IsRequired()

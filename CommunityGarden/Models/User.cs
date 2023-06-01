@@ -18,6 +18,7 @@
 
         public int? ExperdID { get; set; }
 
+        public int Role { get; set; } // 0 - user (owner or casual user), 1 - admins;
         public string PasswordHash { get; set; }  
     }
 }
