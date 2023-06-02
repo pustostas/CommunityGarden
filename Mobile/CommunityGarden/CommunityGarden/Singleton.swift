@@ -36,7 +36,11 @@ class Singleton: ObservableObject {
         
     }
     
-    var currentGarden: Garden?
+    var me: User?
+    
+    var myGarden: Garden?
+    
+    var network: NetworkLayerProtocol
     
     static var shared: Singleton = {
         let instance = Singleton()
@@ -46,13 +50,22 @@ class Singleton: ObservableObject {
     /// Инициализатор Одиночки всегда должен быть скрытым, чтобы предотвратить
     /// прямое создание объекта через инициализатор.
     private init() {
+        network = NetworkMock()
+        Task {
+            await prepareUserData()
+        }
     }
 
+    
     /// Наконец, любой одиночка должен содержать некоторую бизнес-логику,
     /// которая может быть выполнена на его экземпляре.
     func someBusinessLogic() -> String {
         // ...
         return "Result of the 'someBusinessLogic' call"
+    }
+    
+    func prepareUserData() async {
+        myGarden = await network.getMyGarden()
     }
 }
 

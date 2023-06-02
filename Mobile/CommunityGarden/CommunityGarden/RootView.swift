@@ -22,7 +22,7 @@ struct RootView: View {
         case .myPlans:
             PlantsView()
         case .gardenMap:
-            if let garden = Singleton.shared.currentGarden {
+            if let garden = Singleton.shared.myGarden {
                 GardenMapView(map: garden)
             } else {
                 Text("Nema Gardena")
