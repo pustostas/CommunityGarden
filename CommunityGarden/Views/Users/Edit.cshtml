@@ -1,4 +1,5 @@
-﻿@model CommunityGarden.Models.User
+﻿@using System.Reflection;
+@model CommunityGarden.Models.User
 
 @{
     ViewData["Title"] = "Edit";
@@ -12,52 +13,48 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="UserId" />
-            <div class="form-group">
-                <label asp-for="Username" class="control-label"></label>
-                <input asp-for="Username" class="form-control" />
-                <span asp-validation-for="Username" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SecondName" class="control-label"></label>
-                <input asp-for="SecondName" class="form-control" />
-                <span asp-validation-for="SecondName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BirthDate" class="control-label"></label>
-                <input asp-for="BirthDate" class="form-control" />
-                <span asp-validation-for="BirthDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Bio" class="control-label"></label>
-                <input asp-for="Bio" class="form-control" />
-                <span asp-validation-for="Bio" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ExperdID" class="control-label"></label>
-                <input asp-for="ExperdID" class="form-control" />
-                <span asp-validation-for="ExperdID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Role" class="control-label"></label>
-                <input asp-for="Role" class="form-control" />
-                <span asp-validation-for="Role" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PasswordHash" class="control-label"></label>
-                <input asp-for="PasswordHash" class="form-control" />
-                <span asp-validation-for="PasswordHash" class="text-danger"></span>
-            </div>
+            @{
+                string HtmlType(Type type)
+                {
+                    if (type == typeof(int) || type == typeof(int?))
+                    {
+                        return "number";
+                    }
+
+                    return "text";
+                }
+
+                Type modelType = Model.GetType();
+
+                PropertyInfo[] properties = modelType.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+                foreach (PropertyInfo property in properties)
+                {
+                    if (property.Name == properties.First().Name)
+                    {
+                        <input type="hidden" data-val="true" data-val-required="The @property.Name field is required."
+                            id="@property.Name" name="@property.Name" value="@property.GetValue(Model)">
+                        continue;
+                    }
+
+                    <div class="form-group">
+                        <label class="control-label" for="@property.Name">@property.Name</label>
+
+                        @if (Nullable.GetUnderlyingType(property.PropertyType) == null) 
+                        {
+                            <input class="form-control valid" type="@HtmlType(property.PropertyType)" data-val="true" data-val-required="The @property.Name field is required."
+                               id="@property.Name" name="@property.Name" value="@property.GetValue(Model)" aria-describedby="@property.Name-error" aria-invalid="false">
+                            <span class="text-danger field-validation-valid" data-valmsg-for="@property.Name" data-valmsg-replace="true"></span>
+                        }
+                        else
+                        {
+                            <input class="form-control" type="@HtmlType(property.PropertyType)" id="@property.Name" name="@property.Name" value="@property.GetValue(Model)">
+                        }
+                    </div>
+                }
+
+                // I realy miss php now. I'm so sorry
+            }
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
