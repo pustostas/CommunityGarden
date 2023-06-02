@@ -26,6 +26,13 @@
 		58EC5C5F2A2A715F00AAB901 /* Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5E2A2A715F00AAB901 /* Plants.swift */; };
 		58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C602A2A773A00AAB901 /* PlantView.swift */; };
 		58EC5C632A2A82E600AAB901 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C622A2A82E600AAB901 /* DividerView.swift */; };
+		CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */; };
+		CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */; };
+		CEEE40002A2A81790072D367 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFF2A2A81790072D367 /* Plot.swift */; };
+		CEEE40022A2A817E0072D367 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40012A2A817E0072D367 /* User.swift */; };
+		CEEE40042A2A81880072D367 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40032A2A81880072D367 /* Garden.swift */; };
+		CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40052A2A81F90072D367 /* PlotView.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +56,12 @@
 		58EC5C5E2A2A715F00AAB901 /* Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plants.swift; sourceTree = "<group>"; };
 		58EC5C602A2A773A00AAB901 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
 		58EC5C622A2A82E600AAB901 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenMapView.swift; sourceTree = "<group>"; };
+		CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
+		CEEE3FFF2A2A81790072D367 /* Plot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
+		CEEE40012A2A817E0072D367 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEEE40032A2A81880072D367 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		CEEE40052A2A81F90072D367 /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */,
+				CEEE40052A2A81F90072D367 /* PlotView.swift */,
+				CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */,
 				58415F6D2A2626FF00537131 /* LoginView.swift */,
+				CEEE3FFE2A2A81700072D367 /* Models */,
 				58B376432A279C1C00191BA2 /* RegistrationView.swift */,
 				58EC5C5A2A2A485900AAB901 /* RootView.swift */,
 				58EC5C572A2A441600AAB901 /* Utils */,
@@ -116,8 +132,19 @@
 			children = (
 				58EC5C582A2A443A00AAB901 /* CGView.swift */,
 				58EC5C622A2A82E600AAB901 /* DividerView.swift */,
+				CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEEE3FFE2A2A81700072D367 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE3FFF2A2A81790072D367 /* Plot.swift */,
+				CEEE40012A2A817E0072D367 /* User.swift */,
+				CEEE40032A2A81880072D367 /* Garden.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,14 +224,24 @@
 				58B376442A279C1C00191BA2 /* RegistrationView.swift in Sources */,
 				58415F762A263BF800537131 /* SignUpView.swift in Sources */,
 				58EC5C5D2A2A6F3700AAB901 /* Plant.swift in Sources */,
+				CEEE40002A2A81790072D367 /* Plot.swift in Sources */,
+				587138E72A261DC7004D1EC4 /* ContentView.swift in Sources */,
+				58EC5C5B2A2A485900AAB901 /* RootView.swift in Sources */,
+				58B376442A279C1C00191BA2 /* RegistrationView.swift in Sources */,
+				58415F762A263BF800537131 /* SignUpView.swift in Sources */,
+				CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */,
 				58EC5C592A2A443A00AAB901 /* CGView.swift in Sources */,
 				58EC5C5F2A2A715F00AAB901 /* Plants.swift in Sources */,
 				58EC5C632A2A82E600AAB901 /* DividerView.swift in Sources */,
 				58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */,
+				CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */,
 				58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */,
 				58EC5C542A29B9F000AAB901 /* PlantsView.swift in Sources */,
 				58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */,
 				58415F702A262A6300537131 /* ForgotPasswordView.swift in Sources */,
+				CEEE40042A2A81880072D367 /* Garden.swift in Sources */,
+				CEEE40022A2A817E0072D367 /* User.swift in Sources */,
+				CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */,
 				587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */,
 				58B376462A28B2EC00191BA2 /* SideBar.swift in Sources */,
 			);
