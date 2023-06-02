@@ -13,17 +13,21 @@ struct GardenMapView: View {
     
     var offset: Float = 2
     
+    func getPlotOwner(_ plot: Plot) -> User {
+        User(id: "", name: plot.id, firstName: "", secondName: "", birthDate: "", profilePicture: URL(string: "https://i.stack.imgur.com/kpQe2.jpg?s=64&g=1"), email: "", bio: "")
+    }
+    
     @ViewBuilder
     func createMap(screenSize: CGSize) -> some View {
         ZStack {
-            ForEach(map.plots) { plot in
+            ForEach(map.plots, id: \.id) { plot in
                 VStack {
                     Spacer()
                         .frame(height: screenSize.height *  (plot.zeroPoint.y / map.size.height))
                     HStack {
                         Spacer()
                             .frame(width: screenSize.height *  (plot.zeroPoint.x / map.size.height))
-                        PlotView(plot: plot, owner: User(id: "asda", name: plot.id, profilePicture: URL(string: "https://i.stack.imgur.com/kpQe2.jpg?s=64&g=1")))
+                        PlotView(plot: plot, owner: getPlotOwner(plot))
                             .frame(width: screenSize.height *  (plot.size.width / map.size.height))
                             .frame(height: screenSize.height *  (plot.size.height / map.size.height))
                         Spacer()
@@ -55,6 +59,9 @@ struct GardenMapView_Previews: PreviewProvider {
     static var gardenMap: GardenMap {
         
         GardenMap(id: "",
+                  name: "Some",
+                  ownerId: "Some",
+                  code: "Some",
                   size: .init(width: 40, height: 20),
                   plots: [
                     .init(id: "fa", superviserId: "",

@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import CoreGraphics
 
 struct Plot: Codable, Hashable, Identifiable {
     var id: String
     var superviserId: String
-    var gardenId: String
+    var gardenId: String = ""
     var zeroPoint: CGPoint
     var size: CGSize
 }
