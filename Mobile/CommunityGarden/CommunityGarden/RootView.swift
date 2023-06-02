@@ -16,7 +16,6 @@ struct RootView: View {
     
     @ViewBuilder
     func view(root: Singleton.RootRoute) -> some View {
-
         switch root {
         case .gardens:
             GardensView()
@@ -28,15 +27,11 @@ struct RootView: View {
         
     }
     
+    @State private var isSidebarOpened = false
     var body: some View {
-        Text("Pipisk")
-            .onAppear{
-                isActive = true
-            }
-        
-        NavigationLink(destination: CGView{view(root: singleton.rootRoute)},
-                       isActive: $isActive) {
-            EmptyView()
+        ZStack{
+        CGView{view(root: singleton.rootRoute)}
+            SideBar(isSidebarVisible: $isSidebarOpened,isGardenView: false)
         }
         
     }

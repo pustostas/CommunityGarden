@@ -16,7 +16,6 @@ extension View {
 
 
 struct CGView<Content: View>: View {
-    
     init(_ content: @escaping () -> Content) {
         self.content = content
     }
@@ -25,10 +24,10 @@ struct CGView<Content: View>: View {
     var content: () -> Content
     
     
-
-    
     var body: some View {
+        ZStack{
         content()
             .navigationBarHidden(true)
+        }
     }
 }

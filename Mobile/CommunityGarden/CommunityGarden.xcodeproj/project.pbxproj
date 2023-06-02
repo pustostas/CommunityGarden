@@ -13,7 +13,6 @@
 		58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F732A263B4600537131 /* GoogleAuthView.swift */; };
 		58415F762A263BF800537131 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F752A263BF800537131 /* SignUpView.swift */; };
 		587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */; };
-		587138E72A261DC7004D1EC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587138E62A261DC7004D1EC4 /* ContentView.swift */; };
 		587138E92A261DC8004D1EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138E82A261DC8004D1EC4 /* Assets.xcassets */; };
 		587138EC2A261DC8004D1EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */; };
 		58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */; };
@@ -23,6 +22,10 @@
 		58EC5C562A29D58800AAB901 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C552A29D58800AAB901 /* Singleton.swift */; };
 		58EC5C592A2A443A00AAB901 /* CGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C582A2A443A00AAB901 /* CGView.swift */; };
 		58EC5C5B2A2A485900AAB901 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5A2A2A485900AAB901 /* RootView.swift */; };
+		58EC5C5D2A2A6F3700AAB901 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5C2A2A6F3700AAB901 /* Plant.swift */; };
+		58EC5C5F2A2A715F00AAB901 /* Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5E2A2A715F00AAB901 /* Plants.swift */; };
+		58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C602A2A773A00AAB901 /* PlantView.swift */; };
+		58EC5C632A2A82E600AAB901 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C622A2A82E600AAB901 /* DividerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +36,6 @@
 		58415F752A263BF800537131 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		587138E12A261DC7004D1EC4 /* CommunityGarden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunityGarden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityGardenApp.swift; sourceTree = "<group>"; };
-		587138E62A261DC7004D1EC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		587138E82A261DC8004D1EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBoxStyleView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,10 @@
 		58EC5C552A29D58800AAB901 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		58EC5C582A2A443A00AAB901 /* CGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGView.swift; sourceTree = "<group>"; };
 		58EC5C5A2A2A485900AAB901 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		58EC5C5C2A2A6F3700AAB901 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		58EC5C5E2A2A715F00AAB901 /* Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plants.swift; sourceTree = "<group>"; };
+		58EC5C602A2A773A00AAB901 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
+		58EC5C622A2A82E600AAB901 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,6 @@
 				58415F6D2A2626FF00537131 /* LoginView.swift */,
 				58B376432A279C1C00191BA2 /* RegistrationView.swift */,
 				58EC5C5A2A2A485900AAB901 /* RootView.swift */,
-				587138E62A261DC7004D1EC4 /* ContentView.swift */,
 				58EC5C572A2A441600AAB901 /* Utils */,
 				58415F712A263B0B00537131 /* GardensView.swift */,
 				58B376452A28B2EC00191BA2 /* SideBar.swift */,
@@ -91,6 +96,9 @@
 				58415F752A263BF800537131 /* SignUpView.swift */,
 				58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */,
 				58EC5C552A29D58800AAB901 /* Singleton.swift */,
+				58EC5C5C2A2A6F3700AAB901 /* Plant.swift */,
+				58EC5C5E2A2A715F00AAB901 /* Plants.swift */,
+				58EC5C602A2A773A00AAB901 /* PlantView.swift */,
 			);
 			path = CommunityGarden;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				58EC5C582A2A443A00AAB901 /* CGView.swift */,
+				58EC5C622A2A82E600AAB901 /* DividerView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -184,14 +193,17 @@
 				58415F6E2A2626FF00537131 /* LoginView.swift in Sources */,
 				58EC5C562A29D58800AAB901 /* Singleton.swift in Sources */,
 				58415F722A263B0B00537131 /* GardensView.swift in Sources */,
-				587138E72A261DC7004D1EC4 /* ContentView.swift in Sources */,
 				58EC5C5B2A2A485900AAB901 /* RootView.swift in Sources */,
 				58B376442A279C1C00191BA2 /* RegistrationView.swift in Sources */,
 				58415F762A263BF800537131 /* SignUpView.swift in Sources */,
+				58EC5C5D2A2A6F3700AAB901 /* Plant.swift in Sources */,
 				58EC5C592A2A443A00AAB901 /* CGView.swift in Sources */,
+				58EC5C5F2A2A715F00AAB901 /* Plants.swift in Sources */,
+				58EC5C632A2A82E600AAB901 /* DividerView.swift in Sources */,
 				58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */,
 				58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */,
 				58EC5C542A29B9F000AAB901 /* PlantsView.swift in Sources */,
+				58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */,
 				58415F702A262A6300537131 /* ForgotPasswordView.swift in Sources */,
 				587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */,
 				58B376462A28B2EC00191BA2 /* SideBar.swift in Sources */,
