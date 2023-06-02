@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct RegistrationView: View {
+
+
     @State private var email = ""
     @State private var password = ""
     @State private var firstName = ""
     @State private var lastName = ""
     @State private var isAccepting = false
     @State private var goToGardenView = false
-    
+    var disableForm: Bool {
+        password.count < 6 || email.count < 5 || firstName.isEmpty || lastName.isEmpty || isAccepting == false
+    }
     var body: some View {
         NavigationView{
             VStack{
-                HStack{
+                Spacer()
                 Text("Welcome back. Enter your credentials to access your account")
-                    .foregroundColor(.gray)
-                    .font(.callout)
-                    Spacer()
-                }
+                        .foregroundColor(.gray)
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                
                 Group{
                     Spacer()
                     Spacer()
@@ -64,6 +68,7 @@ struct RegistrationView: View {
                         .frame(maxWidth: .infinity)
                         .font(.title2)
                 }
+                .disabled(disableForm)
                 .buttonStyle(.borderedProminent)
                 Group{
                     Spacer()
@@ -76,10 +81,18 @@ struct RegistrationView: View {
             }
             .textFieldStyle(.roundedBorder)
             .padding(10)
-            
-            
-            .navigationTitle("Sign up")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text("Sign up")
+                            .font(.system(size: 40).bold())
+                          .foregroundColor(Color.black)
+                    }
+                }
+            }
+
+
         }
     }
     func verifyCredentials () -> Void{

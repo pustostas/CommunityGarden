@@ -13,17 +13,21 @@ struct LoginView: View {
     @State private var isKeepsSigned = false
     @State private var goToGardenView = false
     @State private var goToGoogleAuthView = false
+    
+    var disableForm: Bool {
+        password.count < 6 || email.count < 5
+    }
     var body: some View {
         NavigationView{
             VStack{
+                Spacer()
                 HStack{
                     Text("Welcome back. Enter your credentials to access your account")
                         .foregroundColor(.gray)
-                        .font(.callout)
-                    Spacer()
+                        .font(.body)
+                        .multilineTextAlignment(.center)
                 }
                 Group{
-                    Spacer()
                     Spacer()
                 }
                 Group{
@@ -59,6 +63,7 @@ struct LoginView: View {
                         .font(.title2)
                 }
                 .buttonStyle(.borderedProminent)
+                .disabled(disableForm)
                 
                 Group{
                     
@@ -100,10 +105,17 @@ struct LoginView: View {
             }
             .textFieldStyle(.roundedBorder)
             .padding(10)
-            
-            
-            .navigationTitle("Login")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text("Login")
+                            .font(.system(size: 40).bold())
+                          .foregroundColor(Color.black)
+                    }
+                }
+            }
+
         }
     }
     func verifyCredentials () -> Void{
