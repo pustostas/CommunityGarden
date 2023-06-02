@@ -14,7 +14,11 @@ struct GardenMapView: View {
     var offset: Float = 2
     
     func getPlotOwner(_ plot: Plot) -> User {
-        User(id: "", name: plot.id, firstName: "", secondName: "", birthDate: "", profilePicture: URL(string: "https://i.stack.imgur.com/kpQe2.jpg?s=64&g=1"), email: "", bio: "")
+        if let user = plot.superviserUser {
+            return user
+        }
+        
+        return User(id: "", name: plot.id, firstName: "", secondName: "", birthDate: "", profilePicture: URL(string: "https://i.stack.imgur.com/kpQe2.jpg?s=64&g=1"), email: "", bio: "")
     }
     
     @ViewBuilder
