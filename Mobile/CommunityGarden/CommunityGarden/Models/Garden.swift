@@ -8,7 +8,7 @@
 import Foundation
 import CoreGraphics
 
-struct GardenMap: Codable, Hashable, Identifiable {
+struct Garden: Codable, Hashable, Identifiable {
     
     var id: String
     var name: String

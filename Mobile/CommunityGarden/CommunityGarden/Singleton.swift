@@ -36,6 +36,8 @@ class Singleton: ObservableObject {
         
     }
     
+    var currentGarden: Garden?
+    
     static var shared: Singleton = {
         let instance = Singleton()
         return instance

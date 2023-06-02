@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GardenMapView: View {
     
-    var map: GardenMap
+    var map: Garden
     
     var offset: Float = 2
     
@@ -56,9 +56,9 @@ struct GardenMapView_Previews: PreviewProvider {
     
     
     
-    static var gardenMap: GardenMap {
+    static var gardenMap: Garden {
         
-        GardenMap(id: "",
+        Garden(id: "",
                   name: "Some",
                   ownerId: "Some",
                   code: "Some",

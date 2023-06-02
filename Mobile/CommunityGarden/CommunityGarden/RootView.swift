@@ -22,6 +22,13 @@ struct RootView: View {
             GardensView()
         case .myPlans:
             PlantsView()
+        case .gardenMap:
+            if let garden = Singleton.shared.currentGarden {
+                GardenMapView(map: garden)
+            } else {
+                Text("Nema Gardena")
+            }
+                
         default:
             Text("Shoto ne to")
         }
