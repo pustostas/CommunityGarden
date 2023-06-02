@@ -13,6 +13,7 @@ struct LoginView: View {
     @State private var isKeepsSigned = false
     @State private var goToGardenView = false
     @State private var goToGoogleAuthView = false
+    @ObservedObject private var singleton = Singleton.shared
     
     var disableForm: Bool {
         password.count < 6 || email.count < 5
@@ -54,9 +55,9 @@ struct LoginView: View {
                     }
                 }
                 Spacer()
-                NavigationLink(destination: GardensView(), isActive: $goToGardenView) {EmptyView()}
+                NavigationLink(destination: CGView{RootView()}, isActive: $singleton.isLoged) {EmptyView()}
                 Button{
-                    self.goToGardenView = true
+                    self.singleton.isLoged.toggle()
                 } label: {
                     Text("Continue")
                         .frame(maxWidth: .infinity)
@@ -117,6 +118,7 @@ struct LoginView: View {
             }
 
         }
+        .navigationBarHidden(true)
     }
     func verifyCredentials () -> Void{
     }

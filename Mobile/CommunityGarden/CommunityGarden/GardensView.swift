@@ -2,32 +2,15 @@ import SwiftUI
 
 struct GardensView: View {
     @State private var isSidebarOpened = false
-    
+    private var gardenNames = ["Garden 1", "Garden 2"]
     var body: some View {
         ZStack {
             NavigationView {
                 List {
-                    ForEach(0..<8) { _ in
-                        AsyncImage(
-                          url: URL(
-                            string: "https://picsum.photos/600"
-                          )) { image in
-                            image
-                                .resizable()
-                                .scaledToFill()
-                                .frame(height: 240)
-                            } placeholder: {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(.gray.opacity(0.6))
-                                        .frame(height: 240)
-                                    ProgressView()
-                                }
-                            }
-                        .aspectRatio(3 / 2, contentMode: .fill)
-                        .cornerRadius(12)
-                        .padding(.vertical)
-                        .shadow(radius: 4)
+                    ForEach(gardenNames, id: \.self) { gardenName in
+                        NavigationLink(destination: PlantsView()){
+                        Text(gardenName)
+                        }
                     }
                     }
                     .toolbar {
@@ -44,8 +27,7 @@ struct GardensView: View {
                     .navigationBarTitleDisplayMode(.inline)
          
             }
-            .navigationBarBackButtonHidden(true)
-            SideBar(isSidebarVisible: $isSidebarOpened)
+            SideBar(isSidebarVisible: $isSidebarOpened,isGardenView: true)
         }
     }
 }

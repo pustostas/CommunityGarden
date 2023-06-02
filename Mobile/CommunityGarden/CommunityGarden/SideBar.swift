@@ -10,33 +10,45 @@ import SwiftUI
 var secondaryColor: Color =
 Color("SecondaryColor")
 
+
+
 struct MenuItem: Identifiable {
-    var id: Int
+    
+    enum Action {
+        case link(AnyView)
+        case action(() -> Void)
+        case rootChange(Singleton.RootRoute)
+    }
+    
+    var id = NSUUID().uuidString
     var icon: String
     var text: String
-    var link: AnyView
+    var action: Action
 }
 
+var gardenActions: [MenuItem] = [
+    MenuItem(icon: "map.circle.fill", text: "Garden map", action: .rootChange(.gardenMap)),
+    MenuItem(icon: "arrowshape.turn.up.backward.circle.fill", text: "Back to gardens", action:  .rootChange(.gardens)),
+]
 var userActions: [MenuItem] = [
-    MenuItem(id: 4001, icon: "person.circle.fill", text: "Login",link:AnyView(LoginView())),
-    ]
+    MenuItem(icon: "leaf.circle.fill", text: "My plants", action:  .rootChange(.myPlans)),
+    MenuItem(icon: "message.circle.fill", text: "Chats", action:  .rootChange(.chats)),
+    MenuItem(icon: "calendar.circle.fill", text: "Calendar", action:  .rootChange(.calendar)),
+]
+
 
 var profileActions: [MenuItem] = [
-    MenuItem(id: 4004,
-              icon: "wrench.and.screwdriver.fill",
-              text: "Settings",
-             link:AnyView(LoginView())),
-    MenuItem(id: 4005,
-              icon: "iphone.and.arrow.forward",
-              text: "Logout",
-             link:AnyView(LoginView())),
+    MenuItem(
+             icon: "gearshape.circle.fill", text: "Settings", action:  .rootChange(.settings)),
+    MenuItem(
+        icon: "arrow.uturn.backward.circle.fill", text: "Logout", action: .action({ Singleton.shared.isLoged = false })),
 ]
 
 struct SideBar: View {
     @Binding var isSidebarVisible: Bool
     var sideBarWidth = UIScreen.main.bounds.size.width * 0.7
     var bgColor: Color = Color.accentColor
-
+    var isGardenView: Bool
     var body: some View {
         ZStack {
             GeometryReader { _ in
@@ -48,22 +60,26 @@ struct SideBar: View {
             .onTapGesture {
                 isSidebarVisible.toggle()
             }
-
+            
             content
         }
         .edgesIgnoringSafeArea(.all)
     }
-
+    
     var content: some View {
         HStack(alignment: .top) {
             ZStack(alignment: .top) {
                 secondaryColor
                 MenuChevron
-
+                
                 VStack(alignment: .leading, spacing: 20) {
                     userProfile
                     Divider()
                     MenuLinks(items: userActions)
+                    if(isGardenView == false){
+                        Divider()
+                        MenuLinks(items: gardenActions)
+                    }
                     Divider()
                     MenuLinks(items: profileActions)
                 }
@@ -73,11 +89,11 @@ struct SideBar: View {
             .frame(width: sideBarWidth)
             .offset(x: isSidebarVisible ? 0 : -sideBarWidth)
             .animation(.default, value: isSidebarVisible)
-
+            
             Spacer()
         }
     }
-
+    
     var MenuChevron: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 18)
@@ -88,40 +104,40 @@ struct SideBar: View {
                 .onTapGesture {
                     isSidebarVisible.toggle()
                 }
-
+            
             Image(systemName: "chevron.right")
                 .foregroundColor(.white)
                 .rotationEffect(isSidebarVisible ?
-                    Angle(degrees: 180) : Angle(degrees: 0))
+                                Angle(degrees: 180) : Angle(degrees: 0))
                 .offset(x: isSidebarVisible ? -4 : 8)
                 .foregroundColor(.blue)
         }
         .offset(x: sideBarWidth / 2, y: 80)
         .animation(.default, value: isSidebarVisible)
     }
-
+    
     var userProfile: some View {
         VStack(alignment: .leading) {
             HStack {
                 AsyncImage(
-                  url: URL(
-                      string: "https://picsum.photos/100")) { image in
-                    image
-                        .resizable()
-                        .frame(width: 50,
-                                height: 50,
-                                alignment: .center)
-                        .clipShape(Circle())
-                        .overlay {
-                            Circle().stroke(.blue, lineWidth: 2)
+                    url: URL(
+                        string: "https://picsum.photos/100")) { image in
+                            image
+                                .resizable()
+                                .frame(width: 50,
+                                       height: 50,
+                                       alignment: .center)
+                                .clipShape(Circle())
+                                .overlay {
+                                    Circle().stroke(.blue, lineWidth: 2)
+                                }
+                        } placeholder: {
+                            ProgressView()
                         }
-                } placeholder: {
-                    ProgressView()
-                }
-                .aspectRatio(3 / 2, contentMode: .fill)
-                .shadow(radius: 4)
-                .padding(.trailing, 18)
-
+                        .aspectRatio(3 / 2, contentMode: .fill)
+                        .shadow(radius: 4)
+                        .padding(.trailing, 18)
+                
                 VStack(alignment: .leading, spacing: 6) {
                     Text("John Doe")
                         .foregroundColor(.white)
@@ -142,33 +158,63 @@ struct MenuLinks: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
             ForEach(items) { item in
-                menuLink(icon: item.icon, text: item.text, link: item.link)
+                menuLink(icon: item.icon, text: item.text, action: item.action)
             }
         }
         .padding(.vertical, 14)
         .padding(.leading, 8)
     }
 }
-
+extension View {
+    /// Applies the given transform if the given condition evaluates to `true`.
+    /// - Parameters:
+    ///   - condition: The condition to evaluate.
+    ///   - transform: The transform to apply to the source `View`.
+    /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}
 struct menuLink: View {
+    @ObservedObject var singleton = Singleton.shared
     var icon: String
     var text: String
-    var link: AnyView
+    var action: MenuItem.Action
+    @State var activeLink = false
+    
     var body: some View {
-        NavigationLink(destination: link){
+        
         HStack {
             Image(systemName: icon)
                 .resizable()
-                .frame(width: 20, height: 20)
-                .foregroundColor(secondaryColor)
+                .frame(width: 40, height: 40)
+                .foregroundColor(.white)
                 .padding(.trailing, 18)
             Text(text)
                 .foregroundColor(.white)
-                .font(.body)
+                .font(.title2)
+        }.onTapGesture(count: 1) {
+            switch action {
+            case let .rootChange(newRoot):
+                Singleton.shared.rootRoute = newRoot
+            case let .action(act):
+                act()
+            case .link(_):
+                activeLink = true
             }
         }
-
+        if case let .link(link) = action {
+            NavigationLink(destination: link, isActive: $activeLink) {EmptyView()}
+        }
+        
     }
+    
 }
+
+
 
 

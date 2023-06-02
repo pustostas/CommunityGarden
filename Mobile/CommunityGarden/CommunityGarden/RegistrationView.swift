@@ -60,7 +60,7 @@ struct RegistrationView: View {
                     }
                 }
                 Spacer()
-                NavigationLink(destination: GardensView(), isActive: $goToGardenView) {EmptyView()}
+                NavigationLink(destination: CGView{GardensView()}, isActive: $goToGardenView) {EmptyView()}
                 Button{
                     self.goToGardenView = true
                 } label: {
