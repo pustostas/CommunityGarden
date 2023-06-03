@@ -27,6 +27,7 @@ namespace CommunityGarden.Controllers
                           Problem("Entity set 'CommunityGardenContext.GardenUser'  is null.");
         }
 
+
         // GET: GardenUsers/Details/5
         public async Task<IActionResult> Details(int? id)
         {
