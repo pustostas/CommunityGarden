@@ -1,5 +1,4 @@
-﻿@using System.Reflection;
-@model User
+﻿@model CommunityGarden.Models.User
 
 @{
     ViewData["Title"] = "Details";
@@ -11,19 +10,60 @@
     <h4>User</h4>
     <hr />
     <dl class="row">
-        @{
-            PropertyInfo[] properties = Model.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
-
-            foreach (PropertyInfo property in properties)
-            {
-                <dt class = "col-sm-2">
-                    @property.Name
-                </dt>
-                <dd class = "col-sm-10">
-                    @property.GetValue(Model)
-                </dd>
-            }
-        }
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SecondName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SecondName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExperdID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExperdID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PasswordHash)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PasswordHash)
+        </dd>
     </dl>
 </div>
 <div>

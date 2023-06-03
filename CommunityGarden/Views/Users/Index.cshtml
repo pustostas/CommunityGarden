@@ -1,5 +1,4 @@
-﻿@using System.Reflection;
-@model IEnumerable<User>
+﻿@model IEnumerable<CommunityGarden.Models.User>
 
 @{
     ViewData["Title"] = "Index";
@@ -10,36 +9,73 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-
 <table class="table">
     <thead>
         <tr>
-            @{
-                Type modelType = Model.First().GetType();
-
-                PropertyInfo[] properties = modelType.GetProperties(BindingFlags.Public | BindingFlags.Instance);
-
-                foreach (PropertyInfo property in properties)
-                {
-                    <th>@property.Name</th>
-                }
-            }
-           <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExperdID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PasswordHash)
+            </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            @{
-                foreach (PropertyInfo property in properties)
-                {
-                    <th>@property.GetValue(item)</th>
-                }
-            }
             <td>
-                    <a asp-action="Edit" asp-route-id="@properties.First().GetValue(item)">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@properties.First().GetValue(item)">Details</a> |
-					<a asp-action="Delete" asp-route-id="@properties.First().GetValue(item)">Delete</a>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExperdID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PasswordHash)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
             </td>
         </tr>
 }
