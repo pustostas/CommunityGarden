@@ -26,7 +26,8 @@
 		58EC5C682A2B61BE00AAB901 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B376432A279C1C00191BA2 /* RegistrationView.swift */; };
 		58EC5C692A2B61C800AAB901 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5A2A2A485900AAB901 /* RootView.swift */; };
 		58EC5C6A2A2B61D300AAB901 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F752A263BF800537131 /* SignUpView.swift */; };
-		58EC5C6C2A2B684900AAB901 /* getMyPlants.json in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C6B2A2B684900AAB901 /* getMyPlants.json */; };
+		58EC5C6D2A2B708800AAB901 /* getMyUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */; };
+		58EC5C6E2A2B713200AAB901 /* getMyPlants.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C6B2A2B684900AAB901 /* getMyPlants.json */; };
 		CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */; };
 		CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */; };
 		CEEE40002A2A81790072D367 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFF2A2A81790072D367 /* Plot.swift */; };
@@ -235,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				587138EC2A261DC8004D1EC4 /* Preview Assets.xcassets in Resources */,
+				58EC5C6E2A2B713200AAB901 /* getMyPlants.json in Resources */,
+				58EC5C6D2A2B708800AAB901 /* getMyUserData.json in Resources */,
 				CEEE400E2A2A963C0072D367 /* getMyGarden.json in Resources */,
 				587138E92A261DC8004D1EC4 /* Assets.xcassets in Resources */,
 			);
@@ -263,7 +266,6 @@
 				58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */,
 				CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */,
 				58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */,
-				58EC5C6C2A2B684900AAB901 /* getMyPlants.json in Sources */,
 				CEEE400B2A2A94F30072D367 /* NetworkMock.swift in Sources */,
 				58EC5C542A29B9F000AAB901 /* PlantsView.swift in Sources */,
 				58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */,

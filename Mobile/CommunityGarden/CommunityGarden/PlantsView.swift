@@ -14,7 +14,7 @@ struct PlantsView: View {
             NavigationView{
                 VStack{
                     List{
-                        ForEach(singleton.myPlants!.plants){ plant in
+                        ForEach(singleton.myPlants?.plants ?? Plants.init(plants: [Plant(id: "234234")]).plants){ plant in
                             NavigationLink {
                                 PlantView(plant: plant)
                             } label: {
@@ -35,7 +35,7 @@ struct PlantsView: View {
                                         Text("Need to be watered every \(plant.waterEvery) days")
                                             .font(.body)
                                             .foregroundColor(.white.opacity(0.8))
-                                        Text("Planted at \(plant.formattedPlantDate)")
+                                        Text("Planted at \(plant.plantDate)")
                                             .font(.body)
                                             .foregroundColor(.white.opacity(0.8))
                                     }

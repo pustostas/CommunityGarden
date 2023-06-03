@@ -22,7 +22,7 @@ struct PlantView: View {
                     .frame(maxWidth: geometry.size.width * 0.6)
                     .padding(.top)
                     
-                    Text("Was planted: \(plant.formattedPlantDate)")
+                    Text("Was planted: \(plant.plantDate)")
                         .foregroundColor(.white)
                         .padding(.top)
                     
