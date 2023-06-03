@@ -62,8 +62,8 @@ struct PlantView: View {
 }
 
 
-struct PlantView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlantView(plant: Plant())
-    }
-}
+//struct PlantView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlantView(plant: Plant())
+//    }
+//}

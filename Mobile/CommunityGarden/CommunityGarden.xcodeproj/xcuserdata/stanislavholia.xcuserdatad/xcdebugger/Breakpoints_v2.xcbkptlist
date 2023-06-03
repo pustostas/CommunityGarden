@@ -46,10 +46,10 @@
             filePath = "CommunityGarden/Singleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "Singleton"
-            landmarkType = "3">
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "prepareUserGardenData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,9 +62,9 @@
             filePath = "CommunityGarden/Singleton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "prepareUserGardenData()"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "prepareUserData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

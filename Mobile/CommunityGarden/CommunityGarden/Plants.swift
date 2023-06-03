@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Plants: ObservableObject{
-    @Published var plants = [Plant(),Plant()]
+struct Plants: Codable, Hashable{
+    var plants:[Plant]
 }

@@ -1,0 +1,24 @@
+{
+    "plants": [
+        {
+            "id": "9A3162C7-04AF-40D7-B477-F41A7EAA6D5A",
+            "name": "Rhododendron",
+            "imageURL": "https://media.istockphoto.com/id/1372896722/photo/potted-banana-plant-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=bioeNAo7zEqALK6jvyGlxeP_Y7h6j0QjuWbwY4E_eP8=",
+            "description": "Rhododendron is a genus of shrubs and small to (rarely) large trees, the smallest species growing to 10–100 cm (4–40 in) tall, and the largest, R. protistum var. giganteum, reported to 30 m (100 ft) tall.[9][10] The leaves are spirally arranged; leaf size can range from 1–2 cm (0.4–0.8 in) to over 50 cm (20 in), exceptionally 100 cm (40 in) in R. sinogrande. They may be either evergreen or deciduous. In some species, the undersides of the leaves are covered with scales (lepidote) or hairs (indumentum).",
+            "type": "Ericaceae",
+            "plantDate": "2023-06-01T12:34:56Z",
+            "waterEvery": 14,
+            "wikiUrl": "https://en.wikipedia.org/wiki/Rhododendron"
+        },
+        {
+            "id": "B2B69E20-1AB6-45E1-B14C-C57D1F2746F2",
+            "name": "Peace Lily",
+            "imageURL": "https://media.istockphoto.com/photos/peace-lily-picture-id1099843204?k=20&m=1099843204&s=612x612&w=0&h=kL0AFuY3AyJd-4k34wvaXL8fYAMiqIM8iHWtTVh2rno=",
+            "description": "Peace Lily is a popular indoor plant known for its attractive foliage and white flowers. It is native to tropical regions of the Americas and belongs to the Araceae family. The plant is characterized by its glossy dark green leaves and the distinctive white spathes that enclose the flowers. Peace Lilies are relatively low-maintenance and can thrive in low light conditions.",
+            "type": "Araceae",
+            "plantDate": "2023-05-15T09:15:30Z",
+            "waterEvery": 7,
+            "wikiUrl": "https://en.wikipedia.org/wiki/Peace_lily"
+        }
+    ]
+}

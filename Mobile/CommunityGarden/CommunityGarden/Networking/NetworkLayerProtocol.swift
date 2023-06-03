@@ -10,4 +10,5 @@ import Foundation
 protocol NetworkLayerProtocol {
     func getMyGarden() async -> Garden?
     func getMyUserData() async -> User?
+    func getMyPlants() async -> Plants? 
 }

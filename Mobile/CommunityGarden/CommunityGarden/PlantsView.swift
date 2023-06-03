@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PlantsView: View {
-    @StateObject var plants = Plants()
+    @StateObject var singleton = Singleton.shared
     var body: some View {
         ZStack{
             NavigationView{
                 VStack{
                     List{
-                        ForEach(plants.plants){ plant in
+                        ForEach(singleton.myPlants!.plants){ plant in
                             NavigationLink {
                                 PlantView(plant: plant)
                             } label: {

@@ -40,6 +40,8 @@ class Singleton: ObservableObject {
     
     var myGarden: Garden?
     
+    var myPlants: Plants?
+    
     var network: NetworkLayerProtocol
     
     static var shared: Singleton = {
@@ -54,6 +56,7 @@ class Singleton: ObservableObject {
         Task {
             await prepareUserGardenData()
             await prepareUserData()
+            await preparePlantsData()
         }
     }
 
@@ -71,7 +74,9 @@ class Singleton: ObservableObject {
     func prepareUserData() async {
         me = await network.getMyUserData()
     }
-
+    func preparePlantsData() async {
+        myPlants = await network.getMyPlants()
+    }
 }
 
 /// Одиночки не должны быть клонируемыми.

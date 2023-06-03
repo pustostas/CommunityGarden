@@ -26,6 +26,7 @@
 		58EC5C682A2B61BE00AAB901 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B376432A279C1C00191BA2 /* RegistrationView.swift */; };
 		58EC5C692A2B61C800AAB901 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5A2A2A485900AAB901 /* RootView.swift */; };
 		58EC5C6A2A2B61D300AAB901 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F752A263BF800537131 /* SignUpView.swift */; };
+		58EC5C6C2A2B684900AAB901 /* getMyPlants.json in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C6B2A2B684900AAB901 /* getMyPlants.json */; };
 		CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */; };
 		CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */; };
 		CEEE40002A2A81790072D367 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFF2A2A81790072D367 /* Plot.swift */; };
@@ -59,6 +60,7 @@
 		58EC5C602A2A773A00AAB901 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
 		58EC5C622A2A82E600AAB901 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyUserData.json; sourceTree = "<group>"; };
+		58EC5C6B2A2B684900AAB901 /* getMyPlants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyPlants.json; sourceTree = "<group>"; };
 		CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenMapView.swift; sourceTree = "<group>"; };
 		CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
 		CEEE3FFF2A2A81790072D367 /* Plot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				CEEE400D2A2A963C0072D367 /* getMyGarden.json */,
 				58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */,
+				58EC5C6B2A2B684900AAB901 /* getMyPlants.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */,
 				CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */,
 				58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */,
+				58EC5C6C2A2B684900AAB901 /* getMyPlants.json in Sources */,
 				CEEE400B2A2A94F30072D367 /* NetworkMock.swift in Sources */,
 				58EC5C542A29B9F000AAB901 /* PlantsView.swift in Sources */,
 				58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */,
