@@ -27,6 +27,13 @@ namespace CommunityGarden.Controllers
                           Problem("Entity set 'CommunityGardenContext.GardenUser'  is null.");
         }
 
+        public async Task<IActionResult> Name_role_list()
+        {
+            return _context.GardenUser != null ?
+                        View(await _context.GardenUser.ToListAsync()) :
+                        Problem("Entity set 'CommunityGardenContext.GardenUser'  is null.");
+        }
+
 
         // GET: GardenUsers/Details/5
         public async Task<IActionResult> Details(int? id)
