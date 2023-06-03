@@ -52,6 +52,7 @@ class Singleton: ObservableObject {
     private init() {
         network = NetworkMock()
         Task {
+            await prepareUserGardenData()
             await prepareUserData()
         }
     }
@@ -64,9 +65,13 @@ class Singleton: ObservableObject {
         return "Result of the 'someBusinessLogic' call"
     }
     
-    func prepareUserData() async {
+    func prepareUserGardenData() async {
         myGarden = await network.getMyGarden()
     }
+    func prepareUserData() async {
+        me = await network.getMyUserData()
+    }
+
 }
 
 /// Одиночки не должны быть клонируемыми.

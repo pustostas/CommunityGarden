@@ -27,5 +27,9 @@ class NetworkMock: NetworkLayerProtocol {
         decodeNamed("getMyGarden")
     }
     
+    func getMyUserData() async -> User? {
+        decodeNamed("getMyUserData")
+    }
+    
     
 }
