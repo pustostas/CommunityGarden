@@ -1,7 +1,8 @@
-﻿@model IEnumerable<CommunityGarden.Models.GardenUser>
+﻿@model CommunityGarden.Models.ViewGardenUsersInfocs
 
 @{
     ViewData["Title"] = "Name_role_list";
+
 }
 
 <h1>Index</h1>
@@ -10,30 +11,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.UserId)
+                Role
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Role)
+                User Name
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Role)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.GardenUserId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.GardenUserId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.GardenUserId">Delete</a>
-                </td>
-            </tr>
-        }
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.GardenUser.Role)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.User.FirstName)
+            </td>
+        </tr>
     </tbody>
 </table>

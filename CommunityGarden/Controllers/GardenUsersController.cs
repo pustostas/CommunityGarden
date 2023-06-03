@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CommunityGarden.Data;
 using CommunityGarden.Models;
+using System.Drawing.Drawing2D;
 
 namespace CommunityGarden.Controllers
 {
@@ -29,9 +30,19 @@ namespace CommunityGarden.Controllers
 
         public async Task<IActionResult> Name_role_list()
         {
-            return _context.GardenUser != null ?
-                        View(await _context.GardenUser.ToListAsync()) :
-                        Problem("Entity set 'CommunityGardenContext.GardenUser'  is null.");
+            GardenUser gardenUser = await _context.GardenUser.FirstOrDefaultAsync(); // Retrieve a specific GardenUser instance from the DbSet
+
+            User user = null;
+            if (_context.User != null)
+                user = await _context.User.FirstOrDefaultAsync(); // Retrieve a specific User instance from the DbSet
+
+            ViewGardenUsersInfocs info = new ViewGardenUsersInfocs
+            {
+                GardenUser = gardenUser,
+                User = user
+            };
+
+            return View(info);
         }
 
 
