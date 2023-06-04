@@ -9,7 +9,9 @@ namespace CommunityGarden.Data
 {
     public class CommunityGardenContext : DbContext
     {
-        public CommunityGardenContext (DbContextOptions<CommunityGardenContext> options)
+		public DbSet<User> Users => Set<User>();
+
+		public CommunityGardenContext (DbContextOptions<CommunityGardenContext> options)
             : base(options)
         {
         }
