@@ -8,6 +8,8 @@
 import Foundation
 
 protocol NetworkLayerProtocol {
+    
+   // func login(email: String, password: String) async -> User?
     func getMyUserData() async -> User?
     func getMyPlants() async -> Plants?
     func getMyGardens() async -> Gardens?

@@ -32,6 +32,7 @@
 		58EC5C772A2BD8B900AAB901 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C762A2BD8B900AAB901 /* UserView.swift */; };
 		58EC5C7C2A2C438400AAB901 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58EC5C7B2A2C438400AAB901 /* Alamofire */; };
 		58EC5C7E2A2CCBFC00AAB901 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */; };
+		58EC5C802A2D214300AAB901 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C7F2A2D214300AAB901 /* Requests.swift */; };
 		CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */; };
 		CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */; };
 		CEEE40002A2A81790072D367 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFF2A2A81790072D367 /* Plot.swift */; };
@@ -69,6 +70,7 @@
 		58EC5C762A2BD8B900AAB901 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		58EC5C792A2C432000AAB901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		58EC5C7F2A2D214300AAB901 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenMapView.swift; sourceTree = "<group>"; };
 		CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
 		CEEE3FFF2A2A81790072D367 /* Plot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				CEEE400C2A2A961F0072D367 /* Mocks */,
 				CEEE40082A2A94C40072D367 /* NetworkLayerProtocol.swift */,
+				58EC5C7F2A2D214300AAB901 /* Requests.swift */,
 				CEEE400A2A2A94F30072D367 /* NetworkMock.swift */,
 			);
 			path = Networking;
@@ -279,6 +282,7 @@
 				58EC5C702A2B82CC00AAB901 /* Gardens.swift in Sources */,
 				58EC5C682A2B61BE00AAB901 /* RegistrationView.swift in Sources */,
 				58415F6E2A2626FF00537131 /* LoginView.swift in Sources */,
+				58EC5C802A2D214300AAB901 /* Requests.swift in Sources */,
 				58EC5C562A29D58800AAB901 /* Singleton.swift in Sources */,
 				58415F722A263B0B00537131 /* GardensView.swift in Sources */,
 				58EC5C5D2A2A6F3700AAB901 /* Plant.swift in Sources */,

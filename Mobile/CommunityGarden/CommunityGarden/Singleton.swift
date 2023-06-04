@@ -9,11 +9,11 @@ import Foundation
 import Combine
 
 class Singleton: ObservableObject {
-
-    @Published var isLoged = true
+    
+    @Published var isLoged = false
     
     @Published var rootRoute = RootRoute.gardens
-
+    
     
     
     
@@ -23,7 +23,7 @@ class Singleton: ObservableObject {
                 return newRootRoute == route
             }
             .eraseToAnyPublisher()
-
+        
     }
     
     enum RootRoute {
@@ -56,13 +56,14 @@ class Singleton: ObservableObject {
     private init() {
         network = NetworkMock()
         Task {
+            
             await prepareUserGardensData()
             await prepareUserData()
             await preparePlantsData()
-            Test.login(email: "AAA", password: "AAA")
         }
+        
+        
     }
-
     
     /// Наконец, любой одиночка должен содержать некоторую бизнес-логику,
     /// которая может быть выполнена на его экземпляре.
@@ -74,6 +75,8 @@ class Singleton: ObservableObject {
     func selectGarden(garden: Garden) {
         myGarden = garden
     }
+    
+    
     func prepareUserGardensData() async {
         myGardens = await network.getMyGardens()
     }
@@ -87,7 +90,7 @@ class Singleton: ObservableObject {
 
 /// Одиночки не должны быть клонируемыми.
 extension Singleton: NSCopying {
-
+    
     func copy(with zone: NSZone? = nil) -> Any {
         return self
     }

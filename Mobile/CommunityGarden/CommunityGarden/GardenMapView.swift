@@ -18,7 +18,7 @@ struct GardenMapView: View {
             return user
         }
         
-        return User(id: "", name: plot.id, firstName: "", secondName: "", birthDate: "", profilePicture: URL(string: "https://i.stack.imgur.com/kpQe2.jpg?s=64&g=1"), email: "", bio: "")
+        return User(id: "1", name: plot.id, firstName: "", secondName: "", birthDate: "", profilePicture: URL(string: "https://i.stack.imgur.com/kpQe2.jpg?s=64&g=1"), email: "", bio: "")
     }
     
     @ViewBuilder

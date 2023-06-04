@@ -57,7 +57,9 @@ struct LoginView: View {
                 Spacer()
                 NavigationLink(destination: CGView{RootView()}, isActive: $singleton.isLoged) {EmptyView()}
                 Button{
-                    self.singleton.isLoged.toggle()
+                        self.singleton.isLoged.toggle()
+                    
+                    
                 } label: {
                     Text("Continue")
                         .frame(maxWidth: .infinity)
