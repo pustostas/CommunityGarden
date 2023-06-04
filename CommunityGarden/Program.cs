@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using CommunityGarden.Data;
 using CommunityGarden.Models;
+using NuGet.Protocol.Plugins;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CommunityGardenContext>(options =>
@@ -50,6 +51,13 @@ app.MapPost("/users", async (User user, CommunityGardenContext db) =>
     await db.SaveChangesAsync();
 
     return Results.Created($"/users/{user.UserId}", user);
+});
+
+app.MapPost("/users/{Email}", async (string email, CommunityGardenContext db) =>
+{
+    var user = db.Users.FirstOrDefault(x => x.Email == email);
+
+    return user != null ? Results.Ok(user) : Results.NotFound();
 });
 
 app.MapDelete("/users/{id}", async (int id, CommunityGardenContext db) =>
