@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58415F6E2A2626FF00537131 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F6D2A2626FF00537131 /* LoginView.swift */; };
+		58415F702A262A6300537131 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F6F2A262A6300537131 /* ForgotPasswordView.swift */; };
+		58415F722A263B0B00537131 /* GardensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F712A263B0B00537131 /* GardensView.swift */; };
+		587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */; };
+		587138E92A261DC8004D1EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138E82A261DC8004D1EC4 /* Assets.xcassets */; };
+		587138EC2A261DC8004D1EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */; };
+		58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */; };
+		58B376462A28B2EC00191BA2 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B376452A28B2EC00191BA2 /* SideBar.swift */; };
+		58EC5C542A29B9F000AAB901 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C532A29B9F000AAB901 /* PlantsView.swift */; };
+		58EC5C562A29D58800AAB901 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C552A29D58800AAB901 /* Singleton.swift */; };
+		58EC5C592A2A443A00AAB901 /* CGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C582A2A443A00AAB901 /* CGView.swift */; };
+		58EC5C5D2A2A6F3700AAB901 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5C2A2A6F3700AAB901 /* Plant.swift */; };
+		58EC5C5F2A2A715F00AAB901 /* Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5E2A2A715F00AAB901 /* Plants.swift */; };
+		58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C602A2A773A00AAB901 /* PlantView.swift */; };
+		58EC5C632A2A82E600AAB901 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C622A2A82E600AAB901 /* DividerView.swift */; };
+		58EC5C682A2B61BE00AAB901 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B376432A279C1C00191BA2 /* RegistrationView.swift */; };
+		58EC5C692A2B61C800AAB901 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C5A2A2A485900AAB901 /* RootView.swift */; };
+		58EC5C6A2A2B61D300AAB901 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F752A263BF800537131 /* SignUpView.swift */; };
+		58EC5C6D2A2B708800AAB901 /* getMyUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */; };
+		58EC5C6E2A2B713200AAB901 /* getMyPlants.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C6B2A2B684900AAB901 /* getMyPlants.json */; };
+		58EC5C702A2B82CC00AAB901 /* Gardens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C6F2A2B82CC00AAB901 /* Gardens.swift */; };
+		58EC5C732A2B8F4D00AAB901 /* getMyGardens.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C712A2B89D100AAB901 /* getMyGardens.json */; };
+		58EC5C772A2BD8B900AAB901 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C762A2BD8B900AAB901 /* UserView.swift */; };
+		58EC5C7C2A2C438400AAB901 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58EC5C7B2A2C438400AAB901 /* Alamofire */; };
+		58EC5C7E2A2CCBFC00AAB901 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */; };
+		58EC5C802A2D214300AAB901 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C7F2A2D214300AAB901 /* Requests.swift */; };
+		CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */; };
+		CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */; };
+		CEEE40002A2A81790072D367 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFF2A2A81790072D367 /* Plot.swift */; };
+		CEEE40022A2A817E0072D367 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40012A2A817E0072D367 /* User.swift */; };
+		CEEE40042A2A81880072D367 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40032A2A81880072D367 /* Garden.swift */; };
+		CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40052A2A81F90072D367 /* PlotView.swift */; };
+		CEEE40092A2A94C40072D367 /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40082A2A94C40072D367 /* NetworkLayerProtocol.swift */; };
+		CEEE400B2A2A94F30072D367 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE400A2A2A94F30072D367 /* NetworkMock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		58415F6D2A2626FF00537131 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		58415F6F2A262A6300537131 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		58415F712A263B0B00537131 /* GardensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardensView.swift; sourceTree = "<group>"; };
+		58415F752A263BF800537131 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		587138E12A261DC7004D1EC4 /* CommunityGarden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunityGarden.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityGardenApp.swift; sourceTree = "<group>"; };
+		587138E82A261DC8004D1EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkBoxStyleView.swift; sourceTree = "<group>"; };
+		58B376432A279C1C00191BA2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		58B376452A28B2EC00191BA2 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		58EC5C532A29B9F000AAB901 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
+		58EC5C552A29D58800AAB901 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		58EC5C582A2A443A00AAB901 /* CGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGView.swift; sourceTree = "<group>"; };
+		58EC5C5A2A2A485900AAB901 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		58EC5C5C2A2A6F3700AAB901 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		58EC5C5E2A2A715F00AAB901 /* Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plants.swift; sourceTree = "<group>"; };
+		58EC5C602A2A773A00AAB901 /* PlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantView.swift; sourceTree = "<group>"; };
+		58EC5C622A2A82E600AAB901 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyUserData.json; sourceTree = "<group>"; };
+		58EC5C6B2A2B684900AAB901 /* getMyPlants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyPlants.json; sourceTree = "<group>"; };
+		58EC5C6F2A2B82CC00AAB901 /* Gardens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gardens.swift; sourceTree = "<group>"; };
+		58EC5C712A2B89D100AAB901 /* getMyGardens.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyGardens.json; sourceTree = "<group>"; };
+		58EC5C762A2BD8B900AAB901 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		58EC5C792A2C432000AAB901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		58EC5C7F2A2D214300AAB901 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenMapView.swift; sourceTree = "<group>"; };
+		CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
+		CEEE3FFF2A2A81790072D367 /* Plot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
+		CEEE40012A2A817E0072D367 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEEE40032A2A81880072D367 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		CEEE40052A2A81F90072D367 /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
+		CEEE40082A2A94C40072D367 /* NetworkLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerProtocol.swift; sourceTree = "<group>"; };
+		CEEE400A2A2A94F30072D367 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		587138DE2A261DC7004D1EC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58EC5C7C2A2C438400AAB901 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		587138D82A261DC7004D1EC4 = {
+			isa = PBXGroup;
+			children = (
+				587138E32A261DC7004D1EC4 /* CommunityGarden */,
+				587138E22A261DC7004D1EC4 /* Products */,
+				58EC5C782A2C431A00AAB901 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		587138E22A261DC7004D1EC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				587138E12A261DC7004D1EC4 /* CommunityGarden.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		587138E32A261DC7004D1EC4 /* CommunityGarden */ = {
+			isa = PBXGroup;
+			children = (
+				58EC5C792A2C432000AAB901 /* Info.plist */,
+				587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */,
+				CEEE40052A2A81F90072D367 /* PlotView.swift */,
+				CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */,
+				58415F6D2A2626FF00537131 /* LoginView.swift */,
+				CEEE3FFE2A2A81700072D367 /* Models */,
+				58B376432A279C1C00191BA2 /* RegistrationView.swift */,
+				CEEE40072A2A93790072D367 /* Networking */,
+				58EC5C572A2A441600AAB901 /* Utils */,
+				58EC5C5A2A2A485900AAB901 /* RootView.swift */,
+				58415F712A263B0B00537131 /* GardensView.swift */,
+				58B376452A28B2EC00191BA2 /* SideBar.swift */,
+				58EC5C532A29B9F000AAB901 /* PlantsView.swift */,
+				587138E82A261DC8004D1EC4 /* Assets.xcassets */,
+				587138EA2A261DC8004D1EC4 /* Preview Content */,
+				58415F6F2A262A6300537131 /* ForgotPasswordView.swift */,
+				58415F752A263BF800537131 /* SignUpView.swift */,
+				58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */,
+				58EC5C552A29D58800AAB901 /* Singleton.swift */,
+				58EC5C602A2A773A00AAB901 /* PlantView.swift */,
+				58EC5C762A2BD8B900AAB901 /* UserView.swift */,
+				58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */,
+			);
+			path = CommunityGarden;
+			sourceTree = "<group>";
+		};
+		587138EA2A261DC8004D1EC4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58EC5C572A2A441600AAB901 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				58EC5C582A2A443A00AAB901 /* CGView.swift */,
+				58EC5C622A2A82E600AAB901 /* DividerView.swift */,
+				CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		58EC5C782A2C431A00AAB901 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEEE3FFE2A2A81700072D367 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE3FFF2A2A81790072D367 /* Plot.swift */,
+				CEEE40012A2A817E0072D367 /* User.swift */,
+				CEEE40032A2A81880072D367 /* Garden.swift */,
+				58EC5C6F2A2B82CC00AAB901 /* Gardens.swift */,
+				58EC5C5C2A2A6F3700AAB901 /* Plant.swift */,
+				58EC5C5E2A2A715F00AAB901 /* Plants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEEE40072A2A93790072D367 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CEEE400C2A2A961F0072D367 /* Mocks */,
+				CEEE40082A2A94C40072D367 /* NetworkLayerProtocol.swift */,
+				58EC5C7F2A2D214300AAB901 /* Requests.swift */,
+				CEEE400A2A2A94F30072D367 /* NetworkMock.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CEEE400C2A2A961F0072D367 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */,
+				58EC5C6B2A2B684900AAB901 /* getMyPlants.json */,
+				58EC5C712A2B89D100AAB901 /* getMyGardens.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		587138E02A261DC7004D1EC4 /* CommunityGarden */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 587138EF2A261DC8004D1EC4 /* Build configuration list for PBXNativeTarget "CommunityGarden" */;
+			buildPhases = (
+				587138DD2A261DC7004D1EC4 /* Sources */,
+				587138DE2A261DC7004D1EC4 /* Frameworks */,
+				587138DF2A261DC7004D1EC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommunityGarden;
+			packageProductDependencies = (
+				58EC5C7B2A2C438400AAB901 /* Alamofire */,
+			);
+			productName = CommunityGarden;
+			productReference = 587138E12A261DC7004D1EC4 /* CommunityGarden.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		587138D92A261DC7004D1EC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					587138E02A261DC7004D1EC4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 587138DC2A261DC7004D1EC4 /* Build configuration list for PBXProject "CommunityGarden" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 587138D82A261DC7004D1EC4;
+			packageReferences = (
+				58EC5C7A2A2C438400AAB901 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 587138E22A261DC7004D1EC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				587138E02A261DC7004D1EC4 /* CommunityGarden */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		587138DF2A261DC7004D1EC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587138EC2A261DC8004D1EC4 /* Preview Assets.xcassets in Resources */,
+				58EC5C732A2B8F4D00AAB901 /* getMyGardens.json in Resources */,
+				58EC5C6E2A2B713200AAB901 /* getMyPlants.json in Resources */,
+				58EC5C6D2A2B708800AAB901 /* getMyUserData.json in Resources */,
+				587138E92A261DC8004D1EC4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		587138DD2A261DC7004D1EC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58EC5C6A2A2B61D300AAB901 /* SignUpView.swift in Sources */,
+				58EC5C692A2B61C800AAB901 /* RootView.swift in Sources */,
+				58EC5C702A2B82CC00AAB901 /* Gardens.swift in Sources */,
+				58EC5C682A2B61BE00AAB901 /* RegistrationView.swift in Sources */,
+				58415F6E2A2626FF00537131 /* LoginView.swift in Sources */,
+				58EC5C802A2D214300AAB901 /* Requests.swift in Sources */,
+				58EC5C562A29D58800AAB901 /* Singleton.swift in Sources */,
+				58415F722A263B0B00537131 /* GardensView.swift in Sources */,
+				58EC5C5D2A2A6F3700AAB901 /* Plant.swift in Sources */,
+				CEEE40002A2A81790072D367 /* Plot.swift in Sources */,
+				CEEE40092A2A94C40072D367 /* NetworkLayerProtocol.swift in Sources */,
+				CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */,
+				58EC5C592A2A443A00AAB901 /* CGView.swift in Sources */,
+				58EC5C5F2A2A715F00AAB901 /* Plants.swift in Sources */,
+				58EC5C632A2A82E600AAB901 /* DividerView.swift in Sources */,
+				CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */,
+				58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */,
+				CEEE400B2A2A94F30072D367 /* NetworkMock.swift in Sources */,
+				58EC5C542A29B9F000AAB901 /* PlantsView.swift in Sources */,
+				58EC5C612A2A773A00AAB901 /* PlantView.swift in Sources */,
+				58415F702A262A6300537131 /* ForgotPasswordView.swift in Sources */,
+				CEEE40042A2A81880072D367 /* Garden.swift in Sources */,
+				CEEE40022A2A817E0072D367 /* User.swift in Sources */,
+				CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */,
+				587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */,
+				58EC5C7E2A2CCBFC00AAB901 /* TestView.swift in Sources */,
+				58EC5C772A2BD8B900AAB901 /* UserView.swift in Sources */,
+				58B376462A28B2EC00191BA2 /* SideBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		587138ED2A261DC8004D1EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		587138EE2A261DC8004D1EC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		587138F02A261DC8004D1EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommunityGarden/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Z76P9AUHH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommunityGarden/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pustota.CommunityGarden;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		587138F12A261DC8004D1EC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CommunityGarden/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Z76P9AUHH;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommunityGarden/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pustota.CommunityGarden;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		587138DC2A261DC7004D1EC4 /* Build configuration list for PBXProject "CommunityGarden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587138ED2A261DC8004D1EC4 /* Debug */,
+				587138EE2A261DC8004D1EC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		587138EF2A261DC8004D1EC4 /* Build configuration list for PBXNativeTarget "CommunityGarden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587138F02A261DC8004D1EC4 /* Debug */,
+				587138F12A261DC8004D1EC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58EC5C7A2A2C438400AAB901 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58EC5C7B2A2C438400AAB901 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58EC5C7A2A2C438400AAB901 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 587138D92A261DC7004D1EC4 /* Project object */;
+}

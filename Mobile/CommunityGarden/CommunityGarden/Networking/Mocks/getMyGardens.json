@@ -1,0 +1,289 @@
+{
+    "gardens":[
+        {
+            "id":"asda",
+            "name":"Garden1",
+            "ownerId":"Some",
+            "code":"Some",
+            "size":[40, 20],
+            "plots":[
+                {
+                    "id":"fa1",
+                    "superviserId":"",
+                    "zeroPoint":[0, 0],
+                    "size":[10, 10],
+                    "superviserUser":{
+                        "id":"mds230mwe",
+                        "name":"STyomich",
+                        "firstName":"Artem",
+                        "secondName":"Stepanenko",
+                        "birthDate":"02.12.1999",
+                        "profilePicture":"https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
+                        "email":"Styomich@gmail.com",
+                        "bio":"I love my bonsai trees",
+                        "extertId":0
+                    }
+                },
+                {
+                    "id":"fa2",
+                    "superviserId":"",
+                    "zeroPoint":[10, 0],
+                    "size":[40, 5],
+                    "superviserUser":{
+                        "id":"ksd2304j2nwd",
+                        "name":"NaExN",
+                        "firstName":"Nadya",
+                        "secondName":"Lumf",
+                        "birthDate":"13.10.1979",
+                        "profilePicture":"https://www.getnews.info/uploads/bb4710262b9221a3406b68c63334e1b3.jpg",
+                        "email":"lostNa@gmail.com",
+                        "bio":"somebio",
+                        "extertId":0
+                    }
+                },
+                {
+                    "id":"fa3",
+                    "superviserId":"",
+                    "zeroPoint":[10, 5],
+                    "size":[5, 10],
+                    "superviserUser":{
+                        "id":"dfswp2f423",
+                        "name":"pustostas",
+                        "firstName":"Stas",
+                        "secondName":"Holia",
+                        "birthDate":"23.04.1990",
+                        "profilePicture":"https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=612x612&w=0&k=20&c=eU56mZTN4ZXYDJ2SR2DFcQahxEnIl3CiqpP3SOQVbbI=",
+                        "email":"stas@gmail.com",
+                        "bio":"I can't sleep, just dream",
+                        "extertId":0
+                    }
+                },
+                {
+                    "id":"fa4",
+                    "superviserId":"",
+                    "zeroPoint":[0, 10],
+                    "size": [10, 10],
+                    "superviserUser":{
+                        "id":"32m msdvsko",
+                        "name":"OlZub",
+                        "firstName":"Olha",
+                        "secondName":"Zubchenko",
+                        "birthDate":"15.02.1965",
+                        "profilePicture":"https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg",
+                        "email":"nmail@gmail.com",
+                        "bio":"Some bio",
+                        "extertId":0
+                    }
+                },
+                {
+                    "id":"fa5",
+                    "superviserId":"",
+                    "zeroPoint": [15, 10],
+                    "size":[10, 10],
+                    "superviserUser":{
+                        "id":"230msdksd",
+                        "name":"Name",
+                        "firstName":"Name",
+                        "secondName":"Name",
+                        "birthDate":"12.12.1212",
+                        "profilePicture":"https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg",
+                        "email":"ddsfd@gmail.com",
+                        "bio":"myGarden",
+                        "extertId":0
+                    }
+                }
+            ]
+        },
+        {
+        "id":"asda",
+        "name":"Garden2",
+        "ownerId":"Some",
+        "code":"Some",
+        "size":[40, 20],
+        "plots":[
+            {
+                "id":"fa1",
+                "superviserId":"",
+                "zeroPoint":[0, 0],
+                "size":[10, 10],
+                "superviserUser":{
+                    "id":"mds230mwe",
+                    "name":"STyomich",
+                    "firstName":"Artem",
+                    "secondName":"Stepanenko",
+                    "birthDate":"02.12.1999",
+                    "profilePicture":"https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
+                    "email":"Styomich@gmail.com",
+                    "bio":"I love my bonsai trees",
+                    "extertId":0
+                }
+            },
+            {
+                "id":"fa2",
+                "superviserId":"",
+                "zeroPoint":[10, 0],
+                "size":[40, 5],
+                "superviserUser":{
+                    "id":"ksd2304j2nwd",
+                    "name":"NaExN",
+                    "firstName":"Nadya",
+                    "secondName":"Lumf",
+                    "birthDate":"13.10.1979",
+                    "profilePicture":"https://www.getnews.info/uploads/bb4710262b9221a3406b68c63334e1b3.jpg",
+                    "email":"lostNa@gmail.com",
+                    "bio":"somebio",
+                    "extertId":0
+                }
+            },
+            {
+                "id":"fa3",
+                "superviserId":"",
+                "zeroPoint":[10, 5],
+                "size":[5, 10],
+                "superviserUser":{
+                    "id":"dfswp2f423",
+                    "name":"pustostas",
+                    "firstName":"Stas",
+                    "secondName":"Holia",
+                    "birthDate":"23.04.1990",
+                    "profilePicture":"https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=612x612&w=0&k=20&c=eU56mZTN4ZXYDJ2SR2DFcQahxEnIl3CiqpP3SOQVbbI=",
+                    "email":"stas@gmail.com",
+                    "bio":"I can't sleep, just dream",
+                    "extertId":0
+                }
+            },
+            {
+                "id":"fa4",
+                "superviserId":"",
+                "zeroPoint":[0, 10],
+                "size": [10, 10],
+                "superviserUser":{
+                    "id":"32m msdvsko",
+                    "name":"OlZub",
+                    "firstName":"Olha",
+                    "secondName":"Zubchenko",
+                    "birthDate":"15.02.1965",
+                    "profilePicture":"https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg",
+                    "email":"nmail@gmail.com",
+                    "bio":"Some bio",
+                    "extertId":0
+                }
+            },
+            {
+                "id":"fa5",
+                "superviserId":"",
+                "zeroPoint": [15, 10],
+                "size":[10, 10],
+                "superviserUser":{
+                    "id":"230msdksd",
+                    "name":"Name",
+                    "firstName":"Name",
+                    "secondName":"Name",
+                    "birthDate":"12.12.1212",
+                    "profilePicture":"https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg",
+                    "email":"ddsfd@gmail.com",
+                    "bio":"myGarden",
+                    "extertId":0
+                }
+            }
+        ]
+    },
+        {
+    "id":"asda",
+    "name":"Garden3",
+    "ownerId":"Some",
+    "code":"Some",
+    "size":[40, 20],
+    "plots":[
+        {
+            "id":"fa1",
+            "superviserId":"",
+            "zeroPoint":[0, 0],
+            "size":[10, 10],
+            "superviserUser":{
+                "id":"mds230mwe",
+                "name":"STyomich",
+                "firstName":"Artem",
+                "secondName":"Stepanenko",
+                "birthDate":"02.12.1999",
+                "profilePicture":"https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
+                "email":"Styomich@gmail.com",
+                "bio":"I love my bonsai trees",
+                "extertId":0
+            }
+        },
+        {
+            "id":"fa2",
+            "superviserId":"",
+            "zeroPoint":[10, 0],
+            "size":[40, 5],
+            "superviserUser":{
+                "id":"ksd2304j2nwd",
+                "name":"NaExN",
+                "firstName":"Nadya",
+                "secondName":"Lumf",
+                "birthDate":"13.10.1979",
+                "profilePicture":"https://www.getnews.info/uploads/bb4710262b9221a3406b68c63334e1b3.jpg",
+                "email":"lostNa@gmail.com",
+                "bio":"somebio",
+                "extertId":0
+            }
+        },
+        {
+            "id":"fa3",
+            "superviserId":"",
+            "zeroPoint":[10, 5],
+            "size":[5, 10],
+            "superviserUser":{
+                "id":"dfswp2f423",
+                "name":"pustostas",
+                "firstName":"Stas",
+                "secondName":"Holia",
+                "birthDate":"23.04.1990",
+                "profilePicture":"https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=612x612&w=0&k=20&c=eU56mZTN4ZXYDJ2SR2DFcQahxEnIl3CiqpP3SOQVbbI=",
+                "email":"stas@gmail.com",
+                "bio":"I can't sleep, just dream",
+                "extertId":0
+            }
+        },
+        {
+            "id":"fa4",
+            "superviserId":"",
+            "zeroPoint":[0, 10],
+            "size": [10, 10],
+            "superviserUser":{
+                "id":"32m msdvsko",
+                "name":"OlZub",
+                "firstName":"Olha",
+                "secondName":"Zubchenko",
+                "birthDate":"15.02.1965",
+                "profilePicture":"https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg",
+                "email":"nmail@gmail.com",
+                "bio":"Some bio",
+                "extertId":0
+            }
+        },
+        {
+            "id":"fa5",
+            "superviserId":"",
+            "zeroPoint": [15, 10],
+            "size":[10, 10],
+            "superviserUser":{
+                "id":"230msdksd",
+                "name":"Name",
+                "firstName":"Name",
+                "secondName":"Name",
+                "birthDate":"12.12.1212",
+                "profilePicture":"https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg",
+                "email":"ddsfd@gmail.com",
+                "bio":"myGarden",
+                "extertId":0
+            }
+        }
+    ]
+}
+]
+}
+
+
+
