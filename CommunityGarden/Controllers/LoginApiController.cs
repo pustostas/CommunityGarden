@@ -19,22 +19,23 @@ namespace CommunityGarden.Controllers
         }
 
 
-        [HttpPost("{Email}")]
-        public async Task<ActionResult<User>> Authenticate(LoginModel login)
+        [HttpGet("{Email}")]
+        public async Task<ActionResult<User>> Authenticate(string email)
         {
+            var str = email.Split("@@@");
 
             if (_context.User == null)
             {
                 return NotFound();
             }
-            var user =  _context.Users.FirstOrDefault(x => x.Email == login.Mail);
+            var user =  _context.Users.FirstOrDefault(x => x.Email == str[0]);
 
             if (user == null)
             {
                 return NotFound();
             }
 
-            if (IsValidUser(login.Mail, login.Password, user))
+            if (IsValidUser(str[0], str[1], user))
             {
                 return user;
             }

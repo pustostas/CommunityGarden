@@ -53,7 +53,7 @@ app.MapPost("/users", async (User user, CommunityGardenContext db) =>
     return Results.Created($"/users/{user.UserId}", user);
 });
 
-app.MapPost("/users/{Email}", async (string email, CommunityGardenContext db) =>
+app.MapGet("/users/{Email}", async (string email, CommunityGardenContext db) =>
 {
     var user = db.Users.FirstOrDefault(x => x.Email == email);
 

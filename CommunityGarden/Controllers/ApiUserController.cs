@@ -36,7 +36,7 @@ namespace CommunityGarden.Controllers
 			{
 				return NotFound();
 			}
-			var grocery = await _context.User.FindAsync();
+			var grocery = await _context.User.FindAsync(id);
 
 			if (grocery == null)
 			{
