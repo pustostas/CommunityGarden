@@ -20,31 +20,30 @@ struct PlotView: View {
                 secondaryColor
                     .frame(width: reader.size.width - offset)
                     .frame(height: reader.size.height - offset)
+                    .clipShape(RoundedRectangle(cornerRadius: 40))
                 VStack {
                     Spacer()
                     Text(owner.name)
-                    AsyncImage(url: owner.profilePicture) { phase in
-                        switch phase {
-                        case .empty:
-                            ProgressView()
-                        case .success(let image):
-                            image.resizable()
-                                 .aspectRatio(contentMode: .fit)
-                                 .frame(maxWidth: 300, maxHeight: 100)
-                        case .failure:
-                            Image(systemName: "photo")
-                        @unknown default:
-                            // Since the AsyncImagePhase enum isn't frozen,
-                            // we need to add this currently unused fallback
-                            // to handle any new cases that might be added
-                            // in the future:
-                            EmptyView()
-                        }
+                    NavigationLink(destination: UserView(user:owner)){
+                        AsyncImage(url: owner.profilePicture ) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: reader.size.width - (offset+50), height: reader.size.height - (offset + 50))
+                                    .clipShape(Circle())
+                                    .overlay {
+                                        Circle().stroke(Color.accentColor, lineWidth: 2)
+                                    }
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            .aspectRatio(3 / 2, contentMode: .fill)
+                            .shadow(radius: 4)
                     }
                     Spacer()
                 }
             }
-        }
+        }.clipShape(RoundedRectangle(cornerRadius: 40))
        
     }
 }

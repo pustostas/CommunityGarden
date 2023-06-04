@@ -10,7 +10,7 @@ import SwiftUI
 struct GardenMapView: View {
     
     var map: Garden
-    
+    var isUserOpened = false
     var offset: Float = 2
     
     func getPlotOwner(_ plot: Plot) -> User {
@@ -34,12 +34,10 @@ struct GardenMapView: View {
                         PlotView(plot: plot, owner: getPlotOwner(plot))
                             .frame(width: screenSize.height *  (plot.size.width / map.size.height))
                             .frame(height: screenSize.height *  (plot.size.height / map.size.height))
+                            .clipShape(RoundedRectangle(cornerRadius: 40))
                         Spacer()
                     }
                     Spacer()
-                }
-                .onTapGesture {
-                    //TODO: Open plot
                 }
             }
         }

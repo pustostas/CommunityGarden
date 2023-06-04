@@ -10,7 +10,6 @@
 		58415F6E2A2626FF00537131 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F6D2A2626FF00537131 /* LoginView.swift */; };
 		58415F702A262A6300537131 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F6F2A262A6300537131 /* ForgotPasswordView.swift */; };
 		58415F722A263B0B00537131 /* GardensView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F712A263B0B00537131 /* GardensView.swift */; };
-		58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F732A263B4600537131 /* GoogleAuthView.swift */; };
 		587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */; };
 		587138E92A261DC8004D1EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138E82A261DC8004D1EC4 /* Assets.xcassets */; };
 		587138EC2A261DC8004D1EC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587138EB2A261DC8004D1EC4 /* Preview Assets.xcassets */; };
@@ -28,6 +27,11 @@
 		58EC5C6A2A2B61D300AAB901 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58415F752A263BF800537131 /* SignUpView.swift */; };
 		58EC5C6D2A2B708800AAB901 /* getMyUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */; };
 		58EC5C6E2A2B713200AAB901 /* getMyPlants.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C6B2A2B684900AAB901 /* getMyPlants.json */; };
+		58EC5C702A2B82CC00AAB901 /* Gardens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C6F2A2B82CC00AAB901 /* Gardens.swift */; };
+		58EC5C732A2B8F4D00AAB901 /* getMyGardens.json in Resources */ = {isa = PBXBuildFile; fileRef = 58EC5C712A2B89D100AAB901 /* getMyGardens.json */; };
+		58EC5C772A2BD8B900AAB901 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C762A2BD8B900AAB901 /* UserView.swift */; };
+		58EC5C7C2A2C438400AAB901 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 58EC5C7B2A2C438400AAB901 /* Alamofire */; };
+		58EC5C7E2A2CCBFC00AAB901 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */; };
 		CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */; };
 		CEEE3FFD2A2A813F0072D367 /* CGExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */; };
 		CEEE40002A2A81790072D367 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE3FFF2A2A81790072D367 /* Plot.swift */; };
@@ -36,14 +40,12 @@
 		CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40052A2A81F90072D367 /* PlotView.swift */; };
 		CEEE40092A2A94C40072D367 /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE40082A2A94C40072D367 /* NetworkLayerProtocol.swift */; };
 		CEEE400B2A2A94F30072D367 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE400A2A2A94F30072D367 /* NetworkMock.swift */; };
-		CEEE400E2A2A963C0072D367 /* getMyGarden.json in Resources */ = {isa = PBXBuildFile; fileRef = CEEE400D2A2A963C0072D367 /* getMyGarden.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58415F6D2A2626FF00537131 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		58415F6F2A262A6300537131 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		58415F712A263B0B00537131 /* GardensView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardensView.swift; sourceTree = "<group>"; };
-		58415F732A263B4600537131 /* GoogleAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthView.swift; sourceTree = "<group>"; };
 		58415F752A263BF800537131 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		587138E12A261DC7004D1EC4 /* CommunityGarden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommunityGarden.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityGardenApp.swift; sourceTree = "<group>"; };
@@ -62,6 +64,11 @@
 		58EC5C622A2A82E600AAB901 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyUserData.json; sourceTree = "<group>"; };
 		58EC5C6B2A2B684900AAB901 /* getMyPlants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyPlants.json; sourceTree = "<group>"; };
+		58EC5C6F2A2B82CC00AAB901 /* Gardens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gardens.swift; sourceTree = "<group>"; };
+		58EC5C712A2B89D100AAB901 /* getMyGardens.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyGardens.json; sourceTree = "<group>"; };
+		58EC5C762A2BD8B900AAB901 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		58EC5C792A2C432000AAB901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenMapView.swift; sourceTree = "<group>"; };
 		CEEE3FFC2A2A813F0072D367 /* CGExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtensions.swift; sourceTree = "<group>"; };
 		CEEE3FFF2A2A81790072D367 /* Plot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
@@ -70,7 +77,6 @@
 		CEEE40052A2A81F90072D367 /* PlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotView.swift; sourceTree = "<group>"; };
 		CEEE40082A2A94C40072D367 /* NetworkLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerProtocol.swift; sourceTree = "<group>"; };
 		CEEE400A2A2A94F30072D367 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
-		CEEE400D2A2A963C0072D367 /* getMyGarden.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getMyGarden.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EC5C7C2A2C438400AAB901 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +96,7 @@
 			children = (
 				587138E32A261DC7004D1EC4 /* CommunityGarden */,
 				587138E22A261DC7004D1EC4 /* Products */,
+				58EC5C782A2C431A00AAB901 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +111,7 @@
 		587138E32A261DC7004D1EC4 /* CommunityGarden */ = {
 			isa = PBXGroup;
 			children = (
+				58EC5C792A2C432000AAB901 /* Info.plist */,
 				587138E42A261DC7004D1EC4 /* CommunityGardenApp.swift */,
 				CEEE40052A2A81F90072D367 /* PlotView.swift */,
 				CEEE3FFA2A2A71930072D367 /* GardenMapView.swift */,
@@ -110,21 +119,20 @@
 				CEEE3FFE2A2A81700072D367 /* Models */,
 				58B376432A279C1C00191BA2 /* RegistrationView.swift */,
 				CEEE40072A2A93790072D367 /* Networking */,
-				58EC5C5A2A2A485900AAB901 /* RootView.swift */,
 				58EC5C572A2A441600AAB901 /* Utils */,
+				58EC5C5A2A2A485900AAB901 /* RootView.swift */,
 				58415F712A263B0B00537131 /* GardensView.swift */,
 				58B376452A28B2EC00191BA2 /* SideBar.swift */,
 				58EC5C532A29B9F000AAB901 /* PlantsView.swift */,
 				587138E82A261DC8004D1EC4 /* Assets.xcassets */,
 				587138EA2A261DC8004D1EC4 /* Preview Content */,
 				58415F6F2A262A6300537131 /* ForgotPasswordView.swift */,
-				58415F732A263B4600537131 /* GoogleAuthView.swift */,
 				58415F752A263BF800537131 /* SignUpView.swift */,
 				58B376412A277FCA00191BA2 /* checkBoxStyleView.swift */,
 				58EC5C552A29D58800AAB901 /* Singleton.swift */,
-				58EC5C5C2A2A6F3700AAB901 /* Plant.swift */,
-				58EC5C5E2A2A715F00AAB901 /* Plants.swift */,
 				58EC5C602A2A773A00AAB901 /* PlantView.swift */,
+				58EC5C762A2BD8B900AAB901 /* UserView.swift */,
+				58EC5C7D2A2CCBFC00AAB901 /* TestView.swift */,
 			);
 			path = CommunityGarden;
 			sourceTree = "<group>";
@@ -147,12 +155,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		58EC5C782A2C431A00AAB901 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CEEE3FFE2A2A81700072D367 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CEEE3FFF2A2A81790072D367 /* Plot.swift */,
 				CEEE40012A2A817E0072D367 /* User.swift */,
 				CEEE40032A2A81880072D367 /* Garden.swift */,
+				58EC5C6F2A2B82CC00AAB901 /* Gardens.swift */,
+				58EC5C5C2A2A6F3700AAB901 /* Plant.swift */,
+				58EC5C5E2A2A715F00AAB901 /* Plants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,9 +188,9 @@
 		CEEE400C2A2A961F0072D367 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				CEEE400D2A2A963C0072D367 /* getMyGarden.json */,
 				58EC5C662A2ABF0D00AAB901 /* getMyUserData.json */,
 				58EC5C6B2A2B684900AAB901 /* getMyPlants.json */,
+				58EC5C712A2B89D100AAB901 /* getMyGardens.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -193,6 +211,9 @@
 			dependencies = (
 			);
 			name = CommunityGarden;
+			packageProductDependencies = (
+				58EC5C7B2A2C438400AAB901 /* Alamofire */,
+			);
 			productName = CommunityGarden;
 			productReference = 587138E12A261DC7004D1EC4 /* CommunityGarden.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 587138D82A261DC7004D1EC4;
+			packageReferences = (
+				58EC5C7A2A2C438400AAB901 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 587138E22A261DC7004D1EC4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,9 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				587138EC2A261DC8004D1EC4 /* Preview Assets.xcassets in Resources */,
+				58EC5C732A2B8F4D00AAB901 /* getMyGardens.json in Resources */,
 				58EC5C6E2A2B713200AAB901 /* getMyPlants.json in Resources */,
 				58EC5C6D2A2B708800AAB901 /* getMyUserData.json in Resources */,
-				CEEE400E2A2A963C0072D367 /* getMyGarden.json in Resources */,
 				587138E92A261DC8004D1EC4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +276,7 @@
 			files = (
 				58EC5C6A2A2B61D300AAB901 /* SignUpView.swift in Sources */,
 				58EC5C692A2B61C800AAB901 /* RootView.swift in Sources */,
+				58EC5C702A2B82CC00AAB901 /* Gardens.swift in Sources */,
 				58EC5C682A2B61BE00AAB901 /* RegistrationView.swift in Sources */,
 				58415F6E2A2626FF00537131 /* LoginView.swift in Sources */,
 				58EC5C562A29D58800AAB901 /* Singleton.swift in Sources */,
@@ -263,7 +288,6 @@
 				58EC5C592A2A443A00AAB901 /* CGView.swift in Sources */,
 				58EC5C5F2A2A715F00AAB901 /* Plants.swift in Sources */,
 				58EC5C632A2A82E600AAB901 /* DividerView.swift in Sources */,
-				58415F742A263B4600537131 /* GoogleAuthView.swift in Sources */,
 				CEEE40062A2A81F90072D367 /* PlotView.swift in Sources */,
 				58B376422A277FCA00191BA2 /* checkBoxStyleView.swift in Sources */,
 				CEEE400B2A2A94F30072D367 /* NetworkMock.swift in Sources */,
@@ -274,6 +298,8 @@
 				CEEE40022A2A817E0072D367 /* User.swift in Sources */,
 				CEEE3FFB2A2A71930072D367 /* GardenMapView.swift in Sources */,
 				587138E52A261DC7004D1EC4 /* CommunityGardenApp.swift in Sources */,
+				58EC5C7E2A2CCBFC00AAB901 /* TestView.swift in Sources */,
+				58EC5C772A2BD8B900AAB901 /* UserView.swift in Sources */,
 				58B376462A28B2EC00191BA2 /* SideBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +434,7 @@
 				DEVELOPMENT_TEAM = 2Z76P9AUHH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommunityGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +464,7 @@
 				DEVELOPMENT_TEAM = 2Z76P9AUHH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CommunityGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,6 +505,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58EC5C7A2A2C438400AAB901 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58EC5C7B2A2C438400AAB901 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58EC5C7A2A2C438400AAB901 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 587138D92A261DC7004D1EC4 /* Project object */;
 }

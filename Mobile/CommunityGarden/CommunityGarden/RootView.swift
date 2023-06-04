@@ -18,9 +18,17 @@ struct RootView: View {
     func view(root: Singleton.RootRoute) -> some View {
         switch root {
         case .gardens:
-            GardensView()
-        case .myPlans:
-            PlantsView()
+            if let gardens = Singleton.shared.myGardens {
+                GardensView(gardens: gardens)
+            } else {
+                Text("Nema Gardenov")
+            }
+        case .myPlants:
+            if let plants = Singleton.shared.myPlants {
+                PlantsView(plants: plants)
+            } else {
+                Text("Nema Plants")
+            }
         case .gardenMap:
             if let garden = Singleton.shared.myGarden {
                 GardenMapView(map: garden)
@@ -38,7 +46,11 @@ struct RootView: View {
     var body: some View {
         ZStack{
         CGView{view(root: singleton.rootRoute)}
-            SideBar(isSidebarVisible: $isSidebarOpened,isGardenView: false)
+            if(singleton.myGarden == nil ){
+            SideBar(isSidebarVisible: $isSidebarOpened,isGardenView: true)
+            }else{
+                SideBar(isSidebarVisible: $isSidebarOpened,isGardenView: false)
+            }
         }
         
     }

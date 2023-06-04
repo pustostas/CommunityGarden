@@ -1,14 +1,15 @@
 //
-//  PlantView.swift
+//  PlotDetailView.swift
 //  CommunityGarden
 //
-//  Created by Станислав Голя on 02.06.2023.
+//  Created by Станислав Голя on 03.06.2023.
 //
 
+import Foundation
 import SwiftUI
 
-struct PlantView: View {
-    let plant: Plant
+struct PlotDetailView: View {
+    let plot: Plot
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
@@ -60,10 +61,3 @@ struct PlantView: View {
     }
     
 }
-
-
-//struct PlantView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlantView(plant: Plant())
-//    }
-//}

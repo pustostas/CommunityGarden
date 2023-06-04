@@ -29,7 +29,7 @@ class Singleton: ObservableObject {
     enum RootRoute {
         case gardens
         case gardenMap
-        case myPlans
+        case myPlants
         case settings
         case chats
         case calendar
@@ -37,6 +37,8 @@ class Singleton: ObservableObject {
     }
     
     var me: User?
+    
+    var myGardens: Gardens?
     
     var myGarden: Garden?
     
@@ -54,9 +56,10 @@ class Singleton: ObservableObject {
     private init() {
         network = NetworkMock()
         Task {
-            await prepareUserGardenData()
+            await prepareUserGardensData()
             await prepareUserData()
             await preparePlantsData()
+            Test.login(email: "AAA", password: "AAA")
         }
     }
 
@@ -68,8 +71,11 @@ class Singleton: ObservableObject {
         return "Result of the 'someBusinessLogic' call"
     }
     
-    func prepareUserGardenData() async {
-        myGarden = await network.getMyGarden()
+    func selectGarden(garden: Garden) {
+        myGarden = garden
+    }
+    func prepareUserGardensData() async {
+        myGardens = await network.getMyGardens()
     }
     func prepareUserData() async {
         me = await network.getMyUserData()

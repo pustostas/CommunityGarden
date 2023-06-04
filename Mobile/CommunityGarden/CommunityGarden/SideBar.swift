@@ -30,16 +30,18 @@ var gardenActions: [MenuItem] = [
     MenuItem(icon: "map.circle.fill", text: "Garden map", action: .rootChange(.gardenMap)),
     MenuItem(icon: "arrowshape.turn.up.backward.circle.fill", text: "Back to gardens", action:  .rootChange(.gardens)),
 ]
+var gardenSelect: [MenuItem] = [
+    MenuItem(icon: "house.circle.fill", text: "Gardens", action:  .rootChange(.gardens)),
+]
 var userActions: [MenuItem] = [
-    MenuItem(icon: "leaf.circle.fill", text: "My plants", action:  .rootChange(.myPlans)),
-    MenuItem(icon: "message.circle.fill", text: "Chats", action:  .rootChange(.chats)),
-    MenuItem(icon: "calendar.circle.fill", text: "Calendar", action:  .rootChange(.calendar)),
+    MenuItem(icon: "leaf.circle.fill", text: "My plants", action:  .rootChange(.myPlants)),
+    // MenuItem(icon: "message.circle.fill", text: "Chats", action:  .rootChange(.chats)),
+    // MenuItem(icon: "calendar.circle.fill", text: "Calendar", action:  .rootChange(.calendar)),
 ]
 
 
 var profileActions: [MenuItem] = [
-    MenuItem(
-        icon: "gearshape.circle.fill", text: "Settings", action:  .rootChange(.settings)),
+    //MenuItem(icon: "gearshape.circle.fill", text: "Settings", action:  .rootChange(.settings)),
     MenuItem(
         icon: "arrow.uturn.backward.circle.fill", text: "Logout", action: .action({ Singleton.shared.isLoged = false })),
 ]
@@ -80,6 +82,8 @@ struct SideBar: View {
                     if(isGardenView == false){
                         Divider()
                         MenuLinks(items: gardenActions)
+                    }else{
+                        MenuLinks(items: gardenSelect)
                     }
                     Divider()
                     MenuLinks(items: profileActions)
@@ -120,101 +124,104 @@ struct SideBar: View {
     var userProfile: some View {
         VStack(alignment: .leading) {
             HStack {
-                AsyncImage(
-                    url: singleton.me?.profilePicture ) { image in
-                        image
-                            .resizable()
-                            .frame(width: 50,
-                                   height: 50,
-                                   alignment: .center)
-                            .clipShape(Circle())
-                            .overlay {
-                                Circle().stroke(.blue, lineWidth: 2)
-                            }
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    .aspectRatio(3 / 2, contentMode: .fill)
-                    .shadow(radius: 4)
-                    .padding(.trailing, 18)
+                NavigationLink(destination: UserView(user: singleton.me!)){
+                    
+                    AsyncImage(
+                        url: singleton.me?.profilePicture ) { image in
+                            image
+                                .resizable()
+                                .frame(width: 50,
+                                       height: 50,
+                                       alignment: .center)
+                                .clipShape(Circle())
+                                .overlay {
+                                    Circle().stroke(.blue, lineWidth: 2)
+                                }
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .aspectRatio(3 / 2, contentMode: .fill)
+                        .shadow(radius: 4)
+                        .padding(.trailing, 18)
+                }
                 
                 VStack(alignment: .leading, spacing: 6) {
                     Text((singleton.me?.firstName ?? "JOHN") + " " + (singleton.me?.secondName ?? "Doe"))
-                            .foregroundColor(.white)
-                            .bold()
-                            .font(.title3)
-                         Text(verbatim: (singleton.me?.email ?? "undefined@gmail.com"))
-                            .foregroundColor(secondaryColor)
-                            .font(.caption)
-                         }
-                         }
-                            .padding(.bottom, 20)
-                         }
-                         }
-                         }
-                         
-                         struct MenuLinks: View {
-                        var items: [MenuItem]
-                        var body: some View {
-                            VStack(alignment: .leading, spacing: 30) {
-                                ForEach(items) { item in
-                                    menuLink(icon: item.icon, text: item.text, action: item.action)
-                                }
-                            }
-                            .padding(.vertical, 14)
-                            .padding(.leading, 8)
-                        }
-                    }
-                         extension View {
-                        /// Applies the given transform if the given condition evaluates to `true`.
-                        /// - Parameters:
-                        ///   - condition: The condition to evaluate.
-                        ///   - transform: The transform to apply to the source `View`.
-                        /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
-                        @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
-                            if condition {
-                                transform(self)
-                            } else {
-                                self
-                            }
-                        }
-                    }
-                         struct menuLink: View {
-                        @ObservedObject var singleton = Singleton.shared
-                        var icon: String
-                        var text: String
-                        var action: MenuItem.Action
-                        @State var activeLink = false
-                        
-                        var body: some View {
-                            
-                            HStack {
-                                Image(systemName: icon)
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .foregroundColor(.white)
-                                    .padding(.trailing, 18)
-                                Text(text)
-                                    .foregroundColor(.white)
-                                    .font(.title2)
-                            }.onTapGesture(count: 1) {
-                                switch action {
-                                case let .rootChange(newRoot):
-                                    Singleton.shared.rootRoute = newRoot
-                                case let .action(act):
-                                    act()
-                                case .link(_):
-                                    activeLink = true
-                                }
-                            }
-                            if case let .link(link) = action {
-                                NavigationLink(destination: link, isActive: $activeLink) {EmptyView()}
-                            }
-                            
-                        }
-                        
-                    }
-                         
-                         
-                         
-                         
+                        .foregroundColor(.white)
+                        .bold()
+                        .font(.title3)
+                }
+            }
+            .padding(.bottom, 20)
+        }
+    }
+}
+
+struct MenuLinks: View {
+    var items: [MenuItem]
+    var body: some View {
+        VStack(alignment: .leading, spacing: 30) {
+            ForEach(items) { item in
+                menuLink(icon: item.icon, text: item.text, action: item.action)
+            }
+        }
+        .padding(.vertical, 14)
+        .padding(.leading, 8)
+    }
+}
+extension View {
+    /// Applies the given transform if the given condition evaluates to `true`.
+    /// - Parameters:
+    ///   - condition: The condition to evaluate.
+    ///   - transform: The transform to apply to the source `View`.
+    /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}
+struct menuLink: View {
+    @ObservedObject var singleton = Singleton.shared
+    var icon: String
+    var text: String
+    var action: MenuItem.Action
+    @State var activeLink = false
+    
+    var body: some View {
+        
+        HStack {
+            Image(systemName: icon)
+                .resizable()
+                .frame(width: 40, height: 40)
+                .foregroundColor(.white)
+                .padding(.trailing, 18)
+            Text(text)
+                .foregroundColor(.white)
+                .font(.title2)
+        }.onTapGesture(count: 1) {
+            switch action {
+            case let .rootChange(newRoot):
+                if(newRoot == .gardens){
+                    Singleton.shared.myGarden = nil
+                }
+                Singleton.shared.rootRoute = newRoot
+            case let .action(act):
+                act()
+            case .link(_):
+                activeLink = true
+            }
+        }
+        if case let .link(link) = action {
+            NavigationLink(destination: link, isActive: $activeLink) {EmptyView()}
+        }
+        
+    }
+    
+}
+
+
+
+

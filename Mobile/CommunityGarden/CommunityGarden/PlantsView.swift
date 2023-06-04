@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct PlantsView: View {
-    @StateObject var singleton = Singleton.shared
+    var plants:Plants
     var body: some View {
         ZStack{
             NavigationView{
                 VStack{
                     List{
-                        ForEach(singleton.myPlants?.plants ?? Plants.init(plants: [Plant(id: "234234")]).plants){ plant in
+                        ForEach(plants.plants ){ plant in
                             NavigationLink {
                                 PlantView(plant: plant)
                             } label: {
                                 VStack {
-                                    AsyncImage(url: URL(string: plant.imageURL)) { image in
+                                    AsyncImage(url: plant.imageURL) { image in
                                         image.resizable()
                                     } placeholder: {
                                         ProgressView()
                                     }
+                                        //.frame(width: 100, height: 100)
                                         .scaledToFit()
-                                        .frame(width: 100, height: 100)
                                         .padding()
                                     
                                     VStack {
@@ -62,8 +62,8 @@ struct PlantsView: View {
     }
 }
 
-struct PlantsView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlantsView()
-    }
-}
+//struct PlantsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlantsView()
+//    }
+//}

@@ -16,6 +16,7 @@ struct RegistrationView: View {
     @State private var lastName = ""
     @State private var isAccepting = false
     @State private var goToGardenView = false
+    @ObservedObject private var singleton = Singleton.shared
     var disableForm: Bool {
         password.count < 6 || email.count < 5 || firstName.isEmpty || lastName.isEmpty || isAccepting == false
     }
@@ -60,7 +61,7 @@ struct RegistrationView: View {
                     }
                 }
                 Spacer()
-                NavigationLink(destination: CGView{GardensView()}, isActive: $goToGardenView) {EmptyView()}
+                NavigationLink(destination: CGView{RootView()}, isActive: $singleton.isLoged) {EmptyView()}
                 Button{
                     self.goToGardenView = true
                 } label: {
