@@ -1,0 +1,69 @@
+﻿@model CommunityGarden.Models.ViewGardenUsersInfocs
+
+@{
+    ViewData["Title"] = "Details_owner_panel";
+}
+
+<h1>@Html.DisplayFor(model => model.User.Username)'s profile</h1>
+
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Username)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Username)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GardenUser.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @{
+                if (Model.GardenUser.Role == 0)
+                {
+                    <text>garden user</text>
+                }
+                else if (Model.GardenUser.Role == 1)
+                {
+                    <text>garden owner</text>
+                }
+            }
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.SecondName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.SecondName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.BirthDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.BirthDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Bio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Bio)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Name_role_list" asp-route-targetGardenId="1">Back to List</a>
+</div>
