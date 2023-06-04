@@ -32,7 +32,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Gardens" asp-action="Index">Gardens</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="GardenUsers" asp-action="Name_role_list">Owner panel</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GardenUsers" asp-action="Name_role_list" asp-route-targetGardenId="1">Owner panel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GardenUsers" asp-action="Create">Create</a>
                         </li>
                     </ul>
                 </div>

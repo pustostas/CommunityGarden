@@ -1,32 +1,76 @@
-﻿@model CommunityGarden.Models.ViewGardenUsersInfocs
-
+﻿@model IEnumerable<CommunityGarden.Models.ViewGardenUsersInfocs>
 @{
-    ViewData["Title"] = "Name_role_list";
+	ViewData["Title"] = "Name_role_list";
 
 }
 
-<h1>Index</h1>
 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+	string gardenName = Model.First().Garden?.GardenName ?? "Garden Not found";
+	
+	<h1>
+		@gardenName garden
+	</h1>
+}
+
+<p>
+	<a asp-action="AddUser" asp-route-targetGardenId="1">Add new user</a>
+</p>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                Role
-            </th>
-            <th>
-                User Name
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.GardenUser.Role)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.User.FirstName)
-            </td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.User.FirstName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.User.SecondName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.GardenUser.Role)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.GardenUser.GardenId)
+			</th>
+			<th>
+
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+			<tr>
+				<td>
+						@Html.DisplayFor(modelItem => item.User.FirstName)
+				</td>
+				<td>
+						@Html.DisplayFor(modelItem => item.User.SecondName)
+				</td>
+				<td>
+						@{
+							if (item.GardenUser.Role == 0)
+							{
+								<text>garden user</text>
+							}
+							else if (item.GardenUser.Role == 1)
+							{
+								<text>garden owner</text>
+							}
+						}
+				</td>
+
+				<td>
+						@Html.DisplayFor(modelItem => item.GardenUser.GardenId)
+				</td>
+				<td>
+					<a asp-action="Details_owner_panel" asp-route-id="@item.GardenUser.GardenUserId" asp-route-targetGardenId="1">View profile</a>
+					<a asp-action="Kick" asp-route-id="@item.GardenUser.GardenUserId">Kick user</a>
+				</td>
+			</tr>
+			</tr>
+		}
+	</tbody>
 </table>

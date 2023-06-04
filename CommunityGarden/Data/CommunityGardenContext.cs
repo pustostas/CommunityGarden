@@ -39,5 +39,6 @@ namespace CommunityGarden.Data
         public DbSet<CommunityGarden.Models.Plot>? Plot { get; set; }
 
         public DbSet<CommunityGarden.Models.PlotUser>? PlotUser { get; set; }
+
     }
 }

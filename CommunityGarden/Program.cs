@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using CommunityGarden.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CommunityGardenContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CommunityGardenContext") ?? throw new InvalidOperationException("Connection string 'CommunityGardenContext' not found.")));
@@ -28,5 +29,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+//{ targetGardenId ?}
 
 app.Run();

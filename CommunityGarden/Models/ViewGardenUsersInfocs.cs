@@ -4,5 +4,6 @@
     {
         public GardenUser GardenUser { get; set; }
         public User User { get; set; }
+        public Garden Garden { get; set; }
     }
 }
